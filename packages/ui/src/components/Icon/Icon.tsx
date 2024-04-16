@@ -1,5 +1,3 @@
 export function Icon() {
-  return (
-    <div>Icon</div>
-  )
+  return <div>Icon</div>;
 }

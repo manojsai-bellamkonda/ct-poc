@@ -1,0 +1,20 @@
+#!/usr/bin/env sh
+echo 'Running ESLint checks before commit'
+
+pnpm run lint ||
+(
+    echo '\n❌ Oops! Seems there are some eslint errors in the above files! ⬆️⬆️⬆️ \n\n Run "npm run lint:fix" to fix those, stage them and try commit again.😇\n';
+    false;
+)
+ 
+echo '\nESLint checks passed. proceeding to Prettier Check.\n'
+
+echo 'Running Prettier check before commit'
+
+npm run check-format ||
+(
+    echo '\n❌ Oops! Seems the above files are not formatted! ⬆️⬆️⬆️ \n\n Run "npm run format" to format them, stage them and try commit again.😇\n';
+    false;
+)
+ 
+echo '\nPrecommit checks passed. proceeding to commit.\n'
