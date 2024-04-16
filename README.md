@@ -19,7 +19,7 @@ Each package/app is 100% [TypeScript](https://www.typescriptlang.org/).
 
 ### Setup
 
-Once the project is cloned, run the below command to setup the project.
+Once the project is cloned, run the below command to setup the project. This command will istall dependencies and setup husky.
 
 ```
 npm run setup
