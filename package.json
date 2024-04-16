@@ -2,7 +2,7 @@
 	"name": "ct-poc",
 	"private": true,
 	"scripts": {
-		"setup" : "npm install",
+		"setup" : "npm install && npx husky",
 		"build": "turbo build",
 		"dev": "turbo dev",
 		"lint": "turbo lint",
