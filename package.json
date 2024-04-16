@@ -2,10 +2,11 @@
 	"name": "ct-poc",
 	"private": true,
 	"scripts": {
+		"setup" : "npm install",
 		"build": "turbo build",
 		"dev": "turbo dev",
 		"lint": "turbo lint",
-    "lint:fix": "turbo run lint:fix",
+		"lint:fix": "turbo run lint:fix",
 		"format": "prettier --write \"**/*.{ts,tsx,md}\"",
 		"check-format": "prettier --check \"**/*.{ts,tsx,md}\""
 	},
