@@ -8,4 +8,4 @@ npm run check-format ||
     false;
 )
  
-echo '\nPrecommit checks passed. proceeding to commit.\n'
+echo '\n✅Precommit checks passed. proceeding to commit.\n'
