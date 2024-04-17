@@ -1,3 +1,4 @@
+import { twMerge } from 'tailwind-merge';
 export interface ButtonCompProps {
   buttonStyle?: string;
   textStyle?: string;
@@ -16,12 +17,12 @@ export const ButtonComp = ({
       : "bg-white text-grey text-base";
   return (
     <button
-      className={`rounded-[6px] px-24 py-[2px] ${defaultButtonStyle} ${buttonStyle}`}
+      className={twMerge(`rounded-[6px] px-24 py-[2px] ${defaultButtonStyle} ${buttonStyle}`)}
       type="button"
     >
       {label && (
         <span
-          className={`leading-[50px] font-semibold text-transform: capitalize ${textStyle}`}
+          className={twMerge(`leading-[50px] font-semibold text-transform: capitalize ${textStyle}`)}
         >
           {label}
         </span>
