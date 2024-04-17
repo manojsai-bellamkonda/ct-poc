@@ -31,5 +31,8 @@
   },
   "sideEffects": [
     "**/*.css"
-  ]
+  ],
+  "dependencies": {
+    "react-icons": "^5.1.0"
+  }
 }
