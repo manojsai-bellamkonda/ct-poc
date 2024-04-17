@@ -1,19 +1,36 @@
-"use client";
-import { ReactNode } from "react";
-
-interface ButtonProps {
-  children: ReactNode;
-  className?: string;
-  appName: string;
+import { twMerge } from "tailwind-merge";
+export interface ButtonProps {
+  buttonStyle?: string;
+  textStyle?: string;
+  label: string;
+  type?: "primary" | "secondary";
 }
-
-export const Button = ({ children, className, appName }: ButtonProps) => {
+export const Button = ({
+  buttonStyle,
+  textStyle,
+  label,
+  type = "primary",
+}: ButtonProps): React.ReactElement => {
+  let defaultButtonStyle =
+    type && type == "secondary"
+      ? "bg-black text-white text-xl"
+      : "bg-white text-grey text-base";
   return (
     <button
-      className={` bg-blue-500 p-4 m-4 ${className}`}
-      onClick={() => alert(`Hello from your ${appName} app!`)}
+      className={twMerge(
+        `rounded-[6px] px-24 py-[2px] ${defaultButtonStyle} ${buttonStyle}`
+      )}
+      type="button"
     >
-      {children}
+      {label && (
+        <span
+          className={twMerge(
+            `leading-[50px] font-semibold text-transform: capitalize ${textStyle}`
+          )}
+        >
+          {label}
+        </span>
+      )}
     </button>
   );
 };

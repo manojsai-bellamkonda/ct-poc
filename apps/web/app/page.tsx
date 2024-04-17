@@ -1,4 +1,4 @@
-import { Icon, ButtonComp } from "@repo/ui";
+import { Button, Icon } from "@repo/ui";
 
 export default function Page(): JSX.Element {
   return (
@@ -29,7 +29,7 @@ export default function Page(): JSX.Element {
       <button className="p-4 bg-teal-500 border-white border rounded-sm">
         Testing Tailwind CSS
       </button>
-      <ButtonComp label="Log out" type="secondary" />
+      <Button label="Log out" type="secondary" />
     </main>
   );
 }
