@@ -5,5 +5,13 @@ module.exports = {
   ...sharedConfig,
   content : [
     "./src/**/*.{js,ts,jsx,tsx,mdx}"
-  ]
+  ],
+  theme:{
+    extend:{
+      colors:{
+        'grey':'#666666'
+      }
+    }
+
+  }
 }
