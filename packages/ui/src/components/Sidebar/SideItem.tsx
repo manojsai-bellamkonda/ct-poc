@@ -1,6 +1,5 @@
 export const SideItem = ({
   children,
-  active,
 }: {
   children?: String;
   active?: Boolean | undefined;
