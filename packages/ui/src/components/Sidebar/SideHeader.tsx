@@ -10,8 +10,8 @@ export const SideHeader = ({
   iconName?: IconName;
 }) => (
   <div
-    className={`border-l-4 cursor-pointer select-none text-lg flex font-bold py-1 ${
-      active ? "bg-gray-300 border-gray-600" : "hover:bg-gray-200"
+    className={`border-l-4 cursor-pointer select-none text-lg flex font-semibold py-1 ${
+      active ? "bg-gray-300 border-gray-600 font-bold" : "hover:bg-gray-200"
     }`}
   >
     <div className="w-8 ml-10">

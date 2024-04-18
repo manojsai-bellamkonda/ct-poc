@@ -8,7 +8,7 @@ export function Sidebar() {
     <div className="flex flex-col max-w-5xl text-sm lg:flex w-80 min-h-screen items-stretch shrink-0 text-black">
       <div className="flex flex-col grow items-stretch bg-gradient-to-b from-white via-white to-gray-300">
         <div className="flex pt-8">
-          <img src="default-pic.png" className="h-5 mx-10 my-4" />
+          <img src="/default-pic.png" className="h-5 mx-10 my-4" />
         </div>
         <div className="flex font-semibold mx-10">#39 Water Tower Place</div>
 
@@ -47,12 +47,7 @@ export function Sidebar() {
             </div>
             <div>Sylvia #33457</div>
           </div>
-          <Button
-            appName="Logout"
-            className="flex justify-center text-center p-3 bg-white rounded-md"
-          >
-            Log Out
-          </Button>
+          <Button label="Log Out" buttonStyle="px-12"></Button>
         </div>
       </div>
     </div>
