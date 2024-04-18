@@ -1,4 +1,4 @@
-import { Icon } from "..";
+import { Icon } from "../Icon";
 import { twMerge } from "tailwind-merge";
 
 export interface HeaderProps {
