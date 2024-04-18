@@ -1,5 +1,4 @@
-import { Header } from "@repo/ui";
-import { greetingData } from "../../../packages/ui/src/constant";
+import { Header, greetingData } from "@repo/ui";
 
 export default function Page(): JSX.Element {
   return (

@@ -1,10 +1,11 @@
 "use client";
-import { iconMap, Icon } from "../Icon";
 import { twMerge } from "tailwind-merge";
+import { Icon } from "..";
+import { iconName } from "../Icon";
 export interface ToolCardProps {
-  icon: string | undefined;
-  title: string | undefined;
-  subtitle: string | undefined;
+  icon: iconName;
+  title: string;
+  subtitle: string;
   link?: string;
   textStyle?: string;
   iconStyle?: string;
@@ -29,10 +30,7 @@ export const ToolCard = ({
     >
       {icon && (
         <span className="flex items-center justify-center w-10 h-10 rounded-full bg-white">
-          <Icon
-            iconName={icon as keyof typeof iconMap}
-            className={twMerge(`w-6 ${iconStyle}`)}
-          />
+          <Icon iconName={icon} className={twMerge(`w-6 ${iconStyle}`)} />
         </span>
       )}
       <div className="flex flex-col text-black px-2 pr-20 ">

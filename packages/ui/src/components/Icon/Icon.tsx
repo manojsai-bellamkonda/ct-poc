@@ -21,7 +21,7 @@ import {
   FaEdit,
 } from "react-icons/fa";
 
-export const iconMap = {
+const iconMap = {
   heart: FaHeart,
   user: FaUser,
   notification: FaBell,
@@ -43,7 +43,7 @@ export const iconMap = {
   loyaltyBadge: FaAward,
   edit: FaEdit,
 };
-
+export type iconName = keyof typeof iconMap;
 interface IconProps {
   iconName: keyof typeof iconMap;
   size?: string | number;

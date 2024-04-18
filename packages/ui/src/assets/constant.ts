@@ -1,4 +1,11 @@
-export const toolsCardData = [
+import { iconName } from "../components/Icon";
+type toolsCardDataType = {
+  title: string;
+  subtitle: string;
+  link?: string;
+  icon: iconName;
+};
+export const toolsCardData: toolsCardDataType[] = [
   {
     title: "Title 1",
     subtitle: "Subtitle 1",
@@ -8,7 +15,7 @@ export const toolsCardData = [
   {
     title: "Title 2",
     subtitle: "Subtitle 2",
-    icon: "hanger",
+    icon: "dressHanger",
   },
   {
     title: "Title 3",
@@ -24,7 +31,7 @@ export const toolsCardData = [
   {
     title: "Title 2",
     subtitle: "Subtitle 2",
-    icon: "hanger",
+    icon: "dressHanger",
     link: "rtyw",
   },
   {
