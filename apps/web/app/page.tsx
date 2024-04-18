@@ -26,9 +26,6 @@ export default function Page(): JSX.Element {
         <Icon iconName="loyaltyBadge" size="24px" color="fuchsia" />
         <Icon iconName="edit" size="24px" color="silver" />
       </div>
-      <button className="p-4 bg-teal-500 border-white border rounded-sm">
-        Testing Tailwind CSS
-      </button>
       <Button label="Log out" type="secondary" />
     </main>
   );

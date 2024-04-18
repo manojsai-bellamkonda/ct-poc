@@ -18,14 +18,14 @@ export const Button = ({
   return (
     <button
       className={twMerge(
-        `rounded-[6px] px-24 py-[2px] ${defaultButtonStyle} ${buttonStyle}`
+        `rounded-[6px] px-24 py-[2px] ${defaultButtonStyle} ${buttonStyle}`,
       )}
       type="button"
     >
       {label && (
         <span
           className={twMerge(
-            `leading-[50px] font-semibold text-transform: capitalize ${textStyle}`
+            `leading-[50px] font-semibold text-transform: capitalize ${textStyle}`,
           )}
         >
           {label}
