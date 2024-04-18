@@ -1,8 +1,8 @@
 "use client";
 import { twMerge } from "tailwind-merge";
-import { Icon, iconName } from "../Icon";
+import { Icon, IconName } from "../Icon";
 export interface ToolCardProps {
-  icon: iconName;
+  icon: IconName;
   title: string;
   subtitle: string;
   link?: string;
