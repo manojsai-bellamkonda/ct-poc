@@ -1,9 +1,8 @@
-import { Button, Icon, Sidebar } from "@repo/ui";
+import { Button, Icon } from "@repo/ui";
 
 export default function Page(): JSX.Element {
   return (
-    <main className="flex min-h-screen">
-      <Sidebar />
+    <main>
       <Button appName="web">Click me</Button>
       <div>
         <h1>User Profile</h1>

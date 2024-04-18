@@ -1,4 +1,5 @@
 import { Icon } from "@repo/ui";
+import { IconName } from "../Icon";
 export const SideHeader = ({
   children,
   active,
@@ -6,7 +7,7 @@ export const SideHeader = ({
 }: {
   children: String;
   active?: Boolean | undefined;
-  iconName?: String;
+  iconName?: IconName;
 }) => (
   <div
     className={`border-l-4 cursor-pointer select-none text-lg flex font-bold py-1 ${
