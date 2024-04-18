@@ -11,11 +11,13 @@ export const SideHeader = ({
 }) => (
   <div
     className={`border-l-4 cursor-pointer select-none text-lg flex font-semibold py-1 ${
-      active ? "bg-gray-300 border-gray-600 font-bold" : "hover:bg-gray-200"
+      active
+        ? "bg-black bg-opacity-10 border-gray-600 font-bold"
+        : "hover:bg-gray-200 border-transparent"
     }`}
   >
     <div className="w-8 ml-10">
-      {iconName && <Icon iconName={iconName} size="22px" color="black"></Icon>}
+      {iconName && <Icon iconName={iconName} size="20px" color="black"></Icon>}
     </div>
     <div>{children}</div>
   </div>

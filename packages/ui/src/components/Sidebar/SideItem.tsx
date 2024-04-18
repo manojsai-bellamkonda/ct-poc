@@ -4,8 +4,7 @@ export const SideItem = ({
   children?: String;
   active?: Boolean | undefined;
 }) => (
-  <div className="border-l-4 cursor-pointer select-none transition flex py-1 hover:bg-gray-200">
-    <div className="w-8 ml-10"></div>
-    <div>{children}</div>
+  <div className="border-l-4 border-transparent cursor-pointer select-none transition flex py-2 hover:bg-black hover:bg-opacity-10">
+    <div className="ml-[72px] leading-5">{children}</div>
   </div>
 );

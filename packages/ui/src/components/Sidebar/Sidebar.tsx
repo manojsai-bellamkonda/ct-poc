@@ -8,11 +8,14 @@ export function Sidebar() {
     <div className="flex flex-col max-w-5xl text-sm lg:flex w-80 min-h-screen items-stretch shrink-0 text-black">
       <div className="flex flex-col grow items-stretch bg-gradient-to-b from-white via-white to-gray-300">
         <div className="flex pt-8">
-          <img src="/default-pic.png" className="h-5 mx-10 my-4" />
+          <img
+            src="/default-pic.png"
+            className="h-5 w-[88px] mx-10 my-4 object-cover border-2"
+          />
         </div>
         <div className="flex font-semibold mx-10">#39 Water Tower Place</div>
 
-        <div className="py-4">
+        <div className="py-4 pt-16">
           <SideHeader active={true} iconName="letter">
             Dashboard
           </SideHeader>
