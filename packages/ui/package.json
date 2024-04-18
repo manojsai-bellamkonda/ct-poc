@@ -33,6 +33,7 @@
     "**/*.css"
   ],
   "dependencies": {
-    "react-icons": "^5.1.0"
+    "react-icons": "^5.1.0",
+    "tailwind-merge": "^2.2.2"
   }
 }
