@@ -21,7 +21,7 @@ import {
   FaEdit,
 } from "react-icons/fa";
 
-const iconMap = {
+export const iconMap = {
   heart: FaHeart,
   user: FaUser,
   notification: FaBell,
