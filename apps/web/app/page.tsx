@@ -3,7 +3,6 @@ import { Button, Icon } from "@repo/ui";
 export default function Page(): JSX.Element {
   return (
     <main>
-      <Button appName="web">Click me</Button>
       <div>
         <h1>User Profile</h1>
         <Icon iconName="user" size="24px" color="blue" />
@@ -27,9 +26,7 @@ export default function Page(): JSX.Element {
         <Icon iconName="loyaltyBadge" size="24px" color="fuchsia" />
         <Icon iconName="edit" size="24px" color="silver" />
       </div>
-      <button className="p-4 bg-teal-500 border-white border rounded-sm">
-        Testing Tailwind CSS
-      </button>
+      <Button label="Log out" type="secondary" />
     </main>
   );
 }
