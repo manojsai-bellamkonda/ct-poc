@@ -43,7 +43,7 @@ const iconMap = {
   loyaltyBadge: FaAward,
   edit: FaEdit,
 };
-export type iconName = keyof typeof iconMap;
+export type IconName = keyof typeof iconMap;
 interface IconProps {
   iconName: keyof typeof iconMap;
   size?: string | number;

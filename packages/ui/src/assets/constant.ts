@@ -1,9 +1,9 @@
-import { iconName } from "../components/Icon";
+import { IconName } from "../components/Icon";
 type toolsCardDataType = {
   title: string;
   subtitle: string;
   link?: string;
-  icon: iconName;
+  icon: IconName;
 };
 export const toolsCardData: toolsCardDataType[] = [
   {
