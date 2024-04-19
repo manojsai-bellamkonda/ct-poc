@@ -32,7 +32,9 @@ export const ToolCard = ({
           <Icon iconName={icon} className={twMerge(`w-6 ${iconStyle}`)} />
         </span>
       )}
-      <div className="flex flex-col text-black px-2 pr-20 ">
+      <div
+        className={`flex flex-col text-black px-2 ${link ? "pr-8 lg:pr-20" : "pr-12 lg:pr-24"}`}
+      >
         <p className="font-bold text-sm leading-4 capitalize">{title}</p>
         <p className="font-medium text-sm leading-5">{subtitle}</p>
       </div>
