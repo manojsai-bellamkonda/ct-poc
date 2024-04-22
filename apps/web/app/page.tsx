@@ -12,8 +12,8 @@ export default function Page(): JSX.Element {
     <main>
       <div>
         <Header greeting={greetingData.greet} name={greetingData.name} />
-        <ToolsCarousel toolsCardData={toolsCardData} />
         <ProfilesCarousel profileCardData={profileCardData} />
+        <ToolsCarousel toolsCardData={toolsCardData} />
       </div>
     </main>
   );

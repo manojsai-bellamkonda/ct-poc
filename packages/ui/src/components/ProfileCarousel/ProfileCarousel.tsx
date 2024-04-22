@@ -11,27 +11,17 @@ type Props = {
 
 export const ProfilesCarousel: React.FC<Props> = ({
   profileCardData,
-  title = "Profiles",
+  title = "Clients",
 }) => {
   return (
-    <div className="px-4 lg:px-8">
+    <div className="profile-carousel px-4 lg:px-8">
       <p className="font-semibold text-lg py-8 leading-5">{title}</p>
 
       <div className="overflow-x-auto">
-        <Swiper
-          spaceBetween={8}
-          slidesPerView="auto"
-          direction="vertical"
-          breakpoints={{
-            1024: {
-              direction: "horizontal",
-            },
-          }}
-        >
+        <Swiper spaceBetween={8} slidesPerView="auto" direction="horizontal">
           {profileCardData.map((profile, index) => {
             return (
               <SwiperSlide key={index} className="mr-2">
-                {/* Add margin-right for spacing between slides */}
                 <ProfileCard name={profile.name} imageSrc={profile.imageSrc} />
               </SwiperSlide>
             );

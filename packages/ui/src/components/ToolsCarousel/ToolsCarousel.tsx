@@ -14,12 +14,12 @@ export const ToolsCarousel: React.FC<Props> = ({
   title = "External Tools",
 }) => {
   return (
-    <div className="px-4 lg:px-8 ">
+    <div className="tool-carousel px-4 lg:px-8 ">
       <p className="font-semibold text-lg py-8 leading-5">{title}</p>
       {/* <div className="hidden lg:block"> */}
 
       <Swiper
-        spaceBetween={120}
+        spaceBetween={20}
         slidesPerView="auto"
         direction="vertical"
         breakpoints={{
