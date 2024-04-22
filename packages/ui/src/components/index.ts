@@ -4,3 +4,4 @@ export * from "./Icon";
 export { Sidebar } from "./Sidebar";
 export { ToolCard } from "./ToolCard";
 export { Header } from "./Header";
+export { ToolsCarousel } from "./ToolsCarousel";

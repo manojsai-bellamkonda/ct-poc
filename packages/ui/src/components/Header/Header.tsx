@@ -14,7 +14,7 @@ export const Header = ({
   iconStyle,
 }: HeaderProps) => {
   return (
-    <div className="bg-white text-black flex py-8 px-8">
+    <div className="bg-white text-black hidden lg:flex py-8 px-8">
       <p
         className={twMerge(
           `mr-auto font-bold text-3xl leading-10 ${textStyle}`,
