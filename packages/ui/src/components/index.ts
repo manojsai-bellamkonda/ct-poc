@@ -1,8 +1,10 @@
-import "../styles/global.css";
-export { Button } from "./Button";
-export * from "./Icon";
-export { Sidebar } from "./Sidebar";
-export { ToolCard } from "./ToolCard";
-export { Header } from "./Header";
-export { ImageCard } from "./ImageCard";
-export { ToolsCarousel } from "./ToolsCarousel";
+import '../styles/global.css'
+export { Button } from './Button'
+export * from './Icon'
+export { Sidebar } from './Sidebar'
+export { ToolCard } from './ToolCard'
+export { Header } from './Header'
+export { ToolsCarousel } from './ToolsCarousel'
+export { ProfileCard } from './ProfileCard'
+export { ProfilesCarousel } from './ProfileCarousel'
+export { ImageCard } from './ImageCard'

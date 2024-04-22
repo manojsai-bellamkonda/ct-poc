@@ -1,14 +1,14 @@
-import { Icon } from "../Icon";
-import { twMerge } from "tailwind-merge";
+import { Icon } from '../Icon'
+import { twMerge } from 'tailwind-merge'
 
 export interface HeaderProps {
-  greeting?: string;
-  name: string;
-  textStyle?: string;
-  iconStyle?: string;
+  greeting?: string
+  name: string
+  textStyle?: string
+  iconStyle?: string
 }
 export const Header = ({
-  greeting = "Good Morning",
+  greeting = 'Good Morning',
   name,
   textStyle,
   iconStyle,
@@ -17,7 +17,7 @@ export const Header = ({
     <div className="bg-white text-black hidden lg:flex py-8 px-8">
       <p
         className={twMerge(
-          `mr-auto font-bold text-3xl leading-10 ${textStyle}`,
+          `mr-auto font-bold text-3xl leading-10 ${textStyle}`
         )}
       >
         {greeting},&nbsp;{name}!
@@ -29,5 +29,5 @@ export const Header = ({
         <Icon iconName="search" size="16px" className={iconStyle} />
       </span>
     </div>
-  );
-};
+  )
+}

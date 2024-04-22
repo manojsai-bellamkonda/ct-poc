@@ -2,18 +2,34 @@
 @tailwind components;
 @tailwind utilities;
 
-.swiper-wrapper {
-  max-width: 250px;
-}
-.swiper-slide {
-  max-width: 250px !important;
-}
+.tool-carousel{
 
-@media screen and (min-width: 1024px) {
   .swiper-slide {
     max-width: 450px !important;
   }
   .swiper-wrapper {
     max-width: 450px !important;
   }
+
+
+}
+
+
+.profile-carousel{
+
+.swiper-wrapper {
+  max-width: 200px;
+}
+.swiper-slide {
+  max-width: 200px !important;
+}
+
+@media screen and (min-width: 1024px) {
+  .swiper-slide {
+    max-width: 200px !important;
+  }
+  .swiper-wrapper {
+    max-width: 200px !important;
+  }
+}
 }

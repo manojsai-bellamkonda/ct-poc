@@ -20,7 +20,7 @@ import {
   FaAward, // for loyalty badge
   FaEdit,
   FaArrowRight,
-} from "react-icons/fa";
+} from 'react-icons/fa'
 
 const iconMap = {
   heart: FaHeart,
@@ -44,21 +44,21 @@ const iconMap = {
   loyaltyBadge: FaAward,
   edit: FaEdit,
   arrowRight: FaArrowRight,
-};
-export type IconName = keyof typeof iconMap;
+}
+export type IconName = keyof typeof iconMap
 interface IconProps {
-  iconName: keyof typeof iconMap;
-  size?: string | number;
-  color?: string;
-  className?: string;
+  iconName: keyof typeof iconMap
+  size?: string | number
+  color?: string
+  className?: string
 }
 
 export const Icon = ({
   iconName,
-  size = "1em",
-  color = "black",
-  className = "",
+  size = '1em',
+  color = 'black',
+  className = '',
 }: IconProps) => {
-  const IconComponent = iconMap[iconName];
-  return <IconComponent size={size} color={color} className={className} />;
-};
+  const IconComponent = iconMap[iconName]
+  return <IconComponent size={size} color={color} className={className} />
+}

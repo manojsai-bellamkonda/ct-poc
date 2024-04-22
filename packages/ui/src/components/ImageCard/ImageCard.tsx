@@ -1,12 +1,12 @@
-import { Icon } from "@repo/ui";
+import { Icon } from '@repo/ui'
 export const ImageCard = ({
   imgUrl,
   caption,
   tag,
 }: {
-  imgUrl: string;
-  caption: string;
-  tag: string;
+  imgUrl: string
+  caption: string
+  tag: string
 }) => {
   return (
     <div className="relative flex flex-col h-[314px] w-[183px] md:h-[444px] md:w-[259px] rounded-lg shrink-0 items-stretch overflow-hidden cursor-pointer bg-white text-black">
@@ -26,5 +26,5 @@ export const ImageCard = ({
         {tag}
       </div>
     </div>
-  );
-};
+  )
+}
