@@ -3,3 +3,4 @@ export { Button } from "./Button";
 export { Icon } from "./Icon";
 export { Sidebar } from "./Sidebar";
 export { Header } from "./Header";
+export { ImageCard } from "./ImageCard";
