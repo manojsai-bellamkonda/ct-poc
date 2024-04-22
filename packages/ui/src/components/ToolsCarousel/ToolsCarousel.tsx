@@ -15,9 +15,7 @@ export const ToolsCarousel: React.FC<Props> = ({
 }) => {
   return (
     <div className="px-4 lg:px-8 ">
-      <p className="font-semibold text-lg py-8 leading-5">{title}</p>
-      {/* <div className="hidden lg:block"> */}
-
+      <p className="font-semibold text-lg py-8 leading-5 text-black">{title}</p>
       <Swiper
         spaceBetween={20}
         slidesPerView="auto"

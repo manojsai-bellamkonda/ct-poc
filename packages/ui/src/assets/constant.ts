@@ -45,3 +45,30 @@ export const greetingData = {
   name: "Sylvia",
   greet: "Good Morning",
 };
+export type NavBarDataType = {
+  image?: string;
+  icon?: IconName;
+  text: string;
+};
+export const NavBarData: NavBarDataType[] = [
+  {
+    text: "Products",
+    icon: "table",
+  },
+  {
+    text: "Bags",
+    icon: "basket",
+  },
+  {
+    text: "Clients",
+    icon: "user",
+  },
+  {
+    text: "Messages",
+    icon: "message",
+  },
+  {
+    text: "Home",
+    image: "/profile-pic.png",
+  },
+];

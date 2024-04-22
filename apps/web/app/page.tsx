@@ -1,4 +1,11 @@
-import { Header, greetingData, ToolsCarousel, toolsCardData } from "@repo/ui";
+import {
+  Header,
+  greetingData,
+  NavBar,
+  NavBarData,
+  ToolsCarousel,
+  toolsCardData,
+} from "@repo/ui";
 
 export default function Page(): JSX.Element {
   return (
@@ -6,6 +13,7 @@ export default function Page(): JSX.Element {
       <div>
         <Header greeting={greetingData.greet} name={greetingData.name} />
         <ToolsCarousel toolsCardData={toolsCardData} />
+        <NavBar navBarData={NavBarData} />
       </div>
     </main>
   );

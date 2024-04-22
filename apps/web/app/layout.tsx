@@ -23,7 +23,7 @@ export default function RootLayout({
         className={`flex ${montserrat.className} grid grid-cols-[auto_1fr] h-screen`}
       >
         <Sidebar />
-        <div className="col-span-1">{children}</div>
+        <div className="col-span-1 bg-white">{children}</div>
       </body>
     </html>
   );
