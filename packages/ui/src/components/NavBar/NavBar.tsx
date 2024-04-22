@@ -11,7 +11,7 @@ export const NavBar: React.FC<Props> = ({ navBarData }) => {
     setActiveNavItem(index);
   };
   return (
-    <div className=" md:hidden w-full fixed bottom-0 left-0 bg-white-smoke py-2 z-50">
+    <div className=" md:hidden w-full fixed bottom-0 left-0 bg-white-smoke pt-2 pb-5 z-50">
       <div className="flex justify-center gap-3 ">
         {navBarData.map((item, index) => {
           return (
@@ -26,7 +26,6 @@ export const NavBar: React.FC<Props> = ({ navBarData }) => {
           );
         })}
       </div>
-      <div className="h-[5px] bg-black w-32 rounded-lg mx-auto"></div>
     </div>
   );
 };
