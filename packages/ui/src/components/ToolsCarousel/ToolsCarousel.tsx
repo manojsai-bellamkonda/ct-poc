@@ -1,17 +1,17 @@
-"use client";
-import { ToolCard, ToolCardProps } from "../ToolCard";
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/swiper-bundle.css";
-import "../../styles/global.css";
+'use client'
+import { ToolCard, ToolCardProps } from '../ToolCard'
+import { Swiper, SwiperSlide } from 'swiper/react'
+import 'swiper/swiper-bundle.css'
+import '../../styles/global.css'
 
 // Define the prop type for the component
 type Props = {
-  toolsCardData: ToolCardProps[];
-  title?: string;
-};
+  toolsCardData: ToolCardProps[]
+  title?: string
+}
 export const ToolsCarousel: React.FC<Props> = ({
   toolsCardData,
-  title = "External Tools",
+  title = 'External Tools',
 }) => {
   return (
     <div className="tool-carousel px-4 lg:px-8 ">
@@ -24,7 +24,7 @@ export const ToolsCarousel: React.FC<Props> = ({
         direction="vertical"
         breakpoints={{
           1024: {
-            direction: "horizontal",
+            direction: 'horizontal',
           },
         }}
       >
@@ -39,9 +39,9 @@ export const ToolsCarousel: React.FC<Props> = ({
                 textStyle="text-nowrap text-ellipsis overflow-hidden"
               />
             </SwiperSlide>
-          );
+          )
         })}
       </Swiper>
     </div>
-  );
-};
+  )
+}

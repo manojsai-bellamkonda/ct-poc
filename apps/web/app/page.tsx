@@ -5,7 +5,7 @@ import {
   toolsCardData,
   ProfilesCarousel,
   profileCardData,
-} from "@repo/ui";
+} from '@repo/ui'
 
 export default function Page(): JSX.Element {
   return (
@@ -16,5 +16,5 @@ export default function Page(): JSX.Element {
         <ToolsCarousel toolsCardData={toolsCardData} />
       </div>
     </main>
-  );
+  )
 }

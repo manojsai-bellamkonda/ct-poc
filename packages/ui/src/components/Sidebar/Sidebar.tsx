@@ -1,11 +1,11 @@
-"use client";
-import { SideHeader } from "./SideHeader";
-import { SideItem } from "./SideItem";
-import { Button } from "@repo/ui";
+'use client'
+import { SideHeader } from './SideHeader'
+import { SideItem } from './SideItem'
+import { Button } from '@repo/ui'
 
 export function Sidebar() {
   return (
-    <div className="flex flex-col max-w-5xl text-sm w-80 h-screen items-stretch text-black grow bg-gradient-to-br from-ghost-white  to-white-smoke">
+    <div className="flex flex-col max-w-5xl text-sm w-80 h-screen items-stretch text-black grow bg-gradient-to-br from-ghost-white  to-white-smoke sticky top-0">
       <div className="flex pt-8">
         <img
           src="/default-pic.png"
@@ -51,5 +51,5 @@ export function Sidebar() {
         <Button label="Log Out" buttonStyle="px-12"></Button>
       </div>
     </div>
-  );
+  )
 }
