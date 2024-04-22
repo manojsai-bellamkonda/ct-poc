@@ -4,7 +4,9 @@ type ProfileCardProps = {
 };
 
 export const ProfileCard: React.FC<ProfileCardProps> = ({ name, imageSrc }) => {
-  const nameParts = name.split(" ");
+  const nameParts = name.match(/(\S+)\s+(\S+)/);
+  const firstName = nameParts ? nameParts[1] : "";
+  const lastName = nameParts ? nameParts[2] : "";
   return (
     <div className="flex flex-col items-center bg-custom-gray rounded-lg shadow px-9 py-4 hover:shadow-lg transition-shadow">
       <div className="relative w-20 h-20 rounded-full bg-custom-gray flex justify-center items-center">
@@ -17,9 +19,8 @@ export const ProfileCard: React.FC<ProfileCardProps> = ({ name, imageSrc }) => {
 
       {name && (
         <div className="text-md font-bold text-black text-center">
-          {nameParts.map((part, index) => (
-            <div key={index}>{part}</div>
-          ))}
+          <div>{firstName}</div>
+          <div>{lastName}</div>
         </div>
       )}
     </div>
