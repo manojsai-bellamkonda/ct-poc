@@ -19,6 +19,7 @@ import {
   FaBirthdayCake, // for birthday cake
   FaAward, // for loyalty badge
   FaEdit,
+  FaArrowRight,
 } from 'react-icons/fa'
 
 const iconMap = {
@@ -42,6 +43,7 @@ const iconMap = {
   birthdayCake: FaBirthdayCake,
   loyaltyBadge: FaAward,
   edit: FaEdit,
+  arrowRight: FaArrowRight,
 }
 export type IconName = keyof typeof iconMap
 interface IconProps {
