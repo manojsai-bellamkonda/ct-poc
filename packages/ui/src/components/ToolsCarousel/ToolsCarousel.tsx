@@ -19,7 +19,7 @@ export const ToolsCarousel: React.FC<Props> = ({
       {/* <div className="hidden lg:block"> */}
 
       <Swiper
-        spaceBetween={20}
+        spaceBetween={120}
         slidesPerView="auto"
         direction="vertical"
         breakpoints={{

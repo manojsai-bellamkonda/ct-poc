@@ -45,3 +45,26 @@ export const greetingData = {
   name: "Sylvia",
   greet: "Good Morning",
 };
+
+export const profileCardData = [
+  {
+    name: "Drink Water",
+    imageSrc: "profile-pic.png",
+  },
+  {
+    name: "Crux bin",
+    imageSrc: "profile-pic.png",
+  },
+  {
+    name: "Sam Jason",
+    imageSrc: "profile-pic.png",
+  },
+  {
+    name: "Violet Rogue",
+    imageSrc: "profile-pic.png",
+  },
+  {
+    name: "Meganium Trafalgar Resoniez Silverstones",
+    imageSrc: "profile-pic.png",
+  },
+];

@@ -5,15 +5,10 @@
 .swiper-wrapper {
   max-width: 250px;
 }
-.swiper-slide {
-  max-width: 250px !important;
-}
 
 @media screen and (min-width: 1024px) {
   .swiper-slide {
-    max-width: 450px !important;
+    max-width: 250px !important;
   }
-  .swiper-wrapper {
-    max-width: 450px !important;
-  }
+
 }
