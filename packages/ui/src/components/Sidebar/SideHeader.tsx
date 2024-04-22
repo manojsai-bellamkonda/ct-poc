@@ -1,5 +1,5 @@
-import { Icon } from "@repo/ui";
-import { IconName } from "../Icon";
+import { Icon, IconName } from "../Icon";
+
 export const SideHeader = ({
   children,
   active,

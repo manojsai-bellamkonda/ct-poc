@@ -1,11 +1,17 @@
-import { Header, ImageCard } from "@repo/ui";
-import { greetingData } from "../../../packages/ui/src/constant";
+import {
+  Header,
+  greetingData,
+  ToolsCarousel,
+  toolsCardData,
+  ImageCard,
+} from "@repo/ui";
 
 export default function Page(): JSX.Element {
   return (
     <main>
       <div>
         <Header greeting={greetingData.greet} name={greetingData.name} />
+        <ToolsCarousel toolsCardData={toolsCardData} />
         <ImageCard
           imgUrl="/default-pic.png"
           caption="Desert Collection"
