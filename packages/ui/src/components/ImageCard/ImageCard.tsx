@@ -16,13 +16,13 @@ export const ImageCard = ({
         alt={caption}
         draggable="false"
       />
-      <div className="h-16 bg-gray-200 flex items-center justify-between">
-        <div className="flex pl-4 text-sm items-center">{caption}</div>
+      <div className="h-16 bg-white-smoke flex items-center justify-between">
+        <div className="pl-4 text-sm">{caption}</div>
         <div className="mr-4">
           <Icon iconName="arrowRight" size="18px"></Icon>
         </div>
       </div>
-      <div className="absolute bg-white bg-opacity-60 top-2 left-2 font-semibold text-[10px] py-[2px] px-2 border border-black rounded-full">
+      <div className="absolute bg-white-smoke top-2 left-2 font-semibold text-[10px] py-[2px] px-2 border border-black rounded-full">
         {tag}
       </div>
     </div>
