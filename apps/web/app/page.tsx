@@ -5,7 +5,8 @@ import {
   toolsCardData,
   ProfilesCarousel,
   profileCardData,
-  // ImageCard,
+  NavBar,
+  NavBarData,
 } from '@repo/ui'
 
 export default function Page(): JSX.Element {
@@ -20,6 +21,7 @@ export default function Page(): JSX.Element {
           caption="Desert Collection"
           tag="Trending"
         ></ImageCard> */}
+        <NavBar navBarData={NavBarData} />
       </div>
     </main>
   )

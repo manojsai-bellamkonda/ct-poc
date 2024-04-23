@@ -4,7 +4,6 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 import 'swiper/swiper-bundle.css'
 import '../../styles/global.css'
 
-// Define the prop type for the component
 type Props = {
   toolsCardData: ToolCardProps[]
   title?: string
@@ -16,8 +15,6 @@ export const ToolsCarousel: React.FC<Props> = ({
   return (
     <div className="tool-carousel px-4 lg:px-8 ">
       <p className="font-semibold text-lg py-8 leading-5">{title}</p>
-      {/* <div className="hidden lg:block"> */}
-
       <Swiper
         spaceBetween={20}
         slidesPerView="auto"
