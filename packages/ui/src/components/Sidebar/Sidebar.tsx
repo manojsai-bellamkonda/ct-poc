@@ -2,6 +2,8 @@
 import { SideHeader } from './SideHeader'
 import { SideItem } from './SideItem'
 import { Button } from '@repo/ui'
+// eslint-disable-next-line no-redeclare
+import Image from 'next/image'
 
 export function Sidebar() {
   return (
@@ -40,10 +42,12 @@ export function Sidebar() {
       <div className="p-8 flex flex-col gap-5">
         <div className="flex items-center gap-3 font-semibold">
           <div>
-            <img
-              className="h-12 w-12 rounded-full object-cover"
-              src="profile-pic.png"
-              alt="lady"
+            <Image
+              src="/profile-pic.png"
+              height={48}
+              width={48}
+              alt="profile picture"
+              className="rounded-full object-cover"
             />
           </div>
           <div>Sylvia #33457</div>

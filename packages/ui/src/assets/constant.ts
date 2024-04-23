@@ -119,3 +119,45 @@ export const NavBarData: NavBarDataType[] = [
     image: '/profile-pic.png',
   },
 ]
+export type ImageCardDataType = {
+  imgUrl: string
+  caption: string
+  tag?: string
+}
+export const ImageCardData = [
+  {
+    imgUrl: '/default-pic.png',
+    caption: 'Desert Collection',
+    tag: 'Trending',
+  },
+  {
+    imgUrl: '/default-pic.png',
+    caption: 'Desert Collection',
+    tag: 'Trending',
+  },
+  {
+    imgUrl: '/default-pic.png',
+    caption: 'Desert Collection',
+    tag: 'Trending',
+  },
+  {
+    imgUrl: '/default-pic.png',
+    caption: 'Desert Collection',
+    tag: 'Trending',
+  },
+  {
+    imgUrl: '/default-pic.png',
+    caption: 'Desert Collection',
+    tag: 'Trending',
+  },
+  {
+    imgUrl: '/default-pic.png',
+    caption: 'Desert Collection',
+    tag: 'Trending',
+  },
+  {
+    imgUrl: '/default-pic.png',
+    caption: 'Desert Collection',
+    tag: 'Trending',
+  },
+]
