@@ -1,3 +1,4 @@
+import Image from 'next/image'
 export interface ProfileCardProps {
   name: string
   imageSrc?: string
@@ -5,7 +6,7 @@ export interface ProfileCardProps {
 }
 
 export const ProfileCard = ({ profile }: { profile: ProfileCardProps }) => {
-  const { name, imageSrc, goldCustomer } = profile
+  const { name, goldCustomer } = profile
   const [firstName, middleName, lastName] = name.split(/\s+/)
   return (
     <div
@@ -17,11 +18,13 @@ export const ProfileCard = ({ profile }: { profile: ProfileCardProps }) => {
       <div
         className={`w-12 h-12 rounded-full ${goldCustomer ? 'bg-gradient-to-r from-purple-300 to-purple-600' : 'bg-white'}`}
       >
-        <div className="bg-white rounded-full w-[42px] h-[42px] m-[3px]">
-          <img
-            src={imageSrc}
+        <div className="bg-white rounded-full m-[3px]">
+          <Image
+            src="/profile-pic.png"
             alt={`${name}'s avatar`}
             className="object-cover rounded-full "
+            width={42}
+            height={42}
           />
         </div>
       </div>
