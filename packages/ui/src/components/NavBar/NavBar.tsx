@@ -1,15 +1,15 @@
-"use client";
-import { useState } from "react";
-import { NavItem } from "../NavItem";
-import { NavBarDataType } from "../../assets/constant";
+'use client'
+import { useState } from 'react'
+import { NavItem } from '../NavItem'
+import { NavBarDataType } from '../../assets/constant'
 type Props = {
-  navBarData: NavBarDataType[];
-};
+  navBarData: NavBarDataType[]
+}
 export const NavBar: React.FC<Props> = ({ navBarData }) => {
-  const [activeNavItem, setActiveNavItem] = useState<number>(4);
+  const [activeNavItem, setActiveNavItem] = useState<number>(4)
   const handleNavItemClick = (index: number) => {
-    setActiveNavItem(index);
-  };
+    setActiveNavItem(index)
+  }
   return (
     <div className=" md:hidden w-full fixed bottom-0 left-0 bg-white-smoke pt-2 pb-5 z-50">
       <div className="flex justify-center gap-3 ">
@@ -23,9 +23,9 @@ export const NavBar: React.FC<Props> = ({ navBarData }) => {
                 isActive={activeNavItem === index}
               />
             </div>
-          );
+          )
         })}
       </div>
     </div>
-  );
-};
+  )
+}

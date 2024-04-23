@@ -1,13 +1,13 @@
-"use client";
-import { twMerge } from "tailwind-merge";
-import { Icon, IconName } from "../Icon";
+'use client'
+import { twMerge } from 'tailwind-merge'
+import { Icon, IconName } from '../Icon'
 export interface ToolCardProps {
-  icon: IconName;
-  title: string;
-  subtitle: string;
-  link?: string;
-  textStyle?: string;
-  iconStyle?: string;
+  icon: IconName
+  title: string
+  subtitle: string
+  link?: string
+  textStyle?: string
+  iconStyle?: string
 }
 export const ToolCard = ({
   icon,
@@ -21,10 +21,10 @@ export const ToolCard = ({
     <div
       className={twMerge(
         `inline-flex bg-white-smoke p-5 items-center rounded-lg  ${textStyle}`,
-        link ? "cursor-pointer" : "",
+        link ? 'cursor-pointer' : ''
       )}
       onClick={() => {
-        window.alert(`Redirect to Tools Page with link ${link}`);
+        if (link) window.alert(`Redirect to Tools Page with link ${link}`)
       }}
     >
       {icon && (
@@ -33,7 +33,7 @@ export const ToolCard = ({
         </span>
       )}
       <div
-        className={`flex flex-col text-black px-2 ${link ? "pr-8 lg:pr-20" : "pr-12 lg:pr-24"}`}
+        className={`flex flex-col text-black px-2 ${link ? 'pr-8 lg:pr-20' : 'pr-12 lg:pr-24'}`}
       >
         <p className="font-bold text-sm leading-4 capitalize">{title}</p>
         <p className="font-medium text-sm leading-5">{subtitle}</p>
@@ -45,5 +45,5 @@ export const ToolCard = ({
         />
       )}
     </div>
-  );
-};
+  )
+}
