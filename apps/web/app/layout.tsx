@@ -2,7 +2,7 @@ import './globals.css'
 import '../styles/global.css'
 import '@repo/ui/styles.css'
 import type { Metadata } from 'next'
-import { Sidebar } from '@repo/ui'
+import { Sidebar, NavBar, NavBarData } from '@repo/ui'
 import { Montserrat } from 'next/font/google'
 
 const montserrat = Montserrat({ subsets: ['latin'] })
@@ -24,6 +24,7 @@ export default function RootLayout({
       >
         <Sidebar />
         <div className="bg-white text-black">{children}</div>
+        <NavBar navBarData={NavBarData} />
       </body>
     </html>
   )

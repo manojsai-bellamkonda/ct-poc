@@ -96,6 +96,7 @@ export type NavBarDataType = {
   image?: string
   icon?: IconName
   text: string
+  link?: string
 }
 export const NavBarData: NavBarDataType[] = [
   {
@@ -109,6 +110,7 @@ export const NavBarData: NavBarDataType[] = [
   {
     text: 'Clients',
     icon: 'user',
+    link: '/clients/1',
   },
   {
     text: 'Messages',
@@ -117,6 +119,7 @@ export const NavBarData: NavBarDataType[] = [
   {
     text: 'Home',
     image: '/profile-pic.png',
+    link: '/',
   },
 ]
 type RecentOrderDataType = {

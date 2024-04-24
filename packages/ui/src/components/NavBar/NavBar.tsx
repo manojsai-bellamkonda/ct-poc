@@ -1,7 +1,9 @@
 'use client'
 import { useState } from 'react'
+import Link from 'next/link'
 import { NavItem } from '../NavItem'
 import { NavBarDataType } from '../../assets/constant'
+
 type Props = {
   navBarData: NavBarDataType[]
 }
@@ -16,12 +18,14 @@ export const NavBar: React.FC<Props> = ({ navBarData }) => {
         {navBarData.map((item, index) => {
           return (
             <div key={index} onClick={() => handleNavItemClick(index)}>
-              <NavItem
-                image={item.image}
-                icon={item.icon}
-                text={item.text}
-                isActive={activeNavItem === index}
-              />
+              <Link href={item.link ? item.link : '/'}>
+                <NavItem
+                  image={item.image}
+                  icon={item.icon}
+                  text={item.text}
+                  isActive={activeNavItem === index}
+                />
+              </Link>
             </div>
           )
         })}
