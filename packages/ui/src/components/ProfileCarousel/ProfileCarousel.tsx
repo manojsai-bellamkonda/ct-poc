@@ -16,11 +16,6 @@ export const ProfilesCarousel: React.FC<Props> = ({
   title = 'Clients',
 }) => {
   const [searchQuery, setSearchQuery] = useState<string>('')
-
-  // Add a handler for the new button
-  const handleAddNewClick = () => {
-    window.alert('Added new user')
-  }
   const normalizeText = (text: string) => text.replace(/\s+/g, '').toLowerCase()
   const filteredProfileData = profileCardData.filter((profile) =>
     searchQuery === ''
