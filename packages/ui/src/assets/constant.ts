@@ -119,3 +119,34 @@ export const NavBarData: NavBarDataType[] = [
     image: '/profile-pic.png',
   },
 ]
+export const sidebarData = {
+  logoSrc: '/default-pic.png',
+  title: '#39 Water Tower Place',
+  links: [
+    { href: '/', label: 'Dashboard', iconName: 'letter' },
+    {
+      href: '/clients',
+      label: 'My Clients',
+      iconName: 'user',
+      subItems: ['All', 'Newly Assigned', 'Recently Active'],
+    },
+    {
+      href: '/products',
+      label: 'Products',
+      iconName: 'dressHanger',
+      subItems: [
+        'New Arrivals',
+        'Tops',
+        'Dresses',
+        'Denim',
+        'Work Wear',
+        'Shoes & Accessories',
+      ],
+    },
+  ],
+  profile: {
+    src: 'profile-pic.png',
+    name: 'Sylvia',
+    discriminator: 33457,
+  },
+}
