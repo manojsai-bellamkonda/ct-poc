@@ -48,6 +48,10 @@ export const greetingData = {
 
 export const profileCardData = [
   {
+    name: 'Add New',
+    imageSrc: 'profile-pic.png',
+  },
+  {
     name: 'Drink Water',
     imageSrc: 'profile-pic.png',
     goldCustomer: true,

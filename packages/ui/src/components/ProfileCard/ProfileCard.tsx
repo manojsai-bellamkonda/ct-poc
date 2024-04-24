@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-redeclare
 import Image from 'next/image'
 export interface ProfileCardProps {
   name: string
@@ -6,13 +7,23 @@ export interface ProfileCardProps {
 }
 
 export const ProfileCard = ({ profile }: { profile: ProfileCardProps }) => {
-  const { name, goldCustomer } = profile
+  const { name, imageSrc, goldCustomer } = profile
   const [firstName, middleName, lastName] = name.split(/\s+/)
+
+  const defaultImageSrc = 'profile-pic.png'
+  const formattedImageSrc = imageSrc
+    ? imageSrc.startsWith('/') ||
+      imageSrc.startsWith('http://') ||
+      imageSrc.startsWith('https://')
+      ? imageSrc
+      : `/` + imageSrc
+    : defaultImageSrc
+
   return (
     <div
       className="flex flex-col items-center gap-4 bg-white-smoke rounded-2xl shadow px-9 py-6 hover:shadow-lg transition-shadow w-[165px] cursor-pointer"
       onClick={() => {
-        window.alert(`Redirect to Profile Page`)
+        window.alert('Redirect to Profile Page')
       }}
     >
       <div
@@ -20,9 +31,9 @@ export const ProfileCard = ({ profile }: { profile: ProfileCardProps }) => {
       >
         <div className="bg-white rounded-full m-[3px]">
           <Image
-            src="/profile-pic.png"
+            src={formattedImageSrc}
             alt={`${name}'s avatar`}
-            className="object-cover rounded-full "
+            className="object-cover rounded-full"
             width={42}
             height={42}
           />
