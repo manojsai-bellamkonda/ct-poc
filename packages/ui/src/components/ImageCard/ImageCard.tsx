@@ -6,7 +6,7 @@ export const ImageCard = ({
 }: {
   imgUrl: string
   caption: string
-  tag: string
+  tag?: string
 }) => {
   return (
     <div className="relative flex flex-col h-[314px] w-[183px] md:h-[444px] md:w-[259px] rounded-lg shrink-0 items-stretch overflow-hidden cursor-pointer bg-white text-black">
@@ -22,9 +22,11 @@ export const ImageCard = ({
           <Icon iconName="arrowRight" size="18px"></Icon>
         </div>
       </div>
-      <div className="absolute bg-white-smoke top-2 left-2 font-semibold text-[10px] py-[2px] px-2 border border-black rounded-full">
-        {tag}
-      </div>
+      {tag && (
+        <div className="absolute bg-white-smoke top-2 left-2 font-semibold text-[10px] py-[2px] px-2 border border-black rounded-full">
+          {tag}
+        </div>
+      )}
     </div>
   )
 }

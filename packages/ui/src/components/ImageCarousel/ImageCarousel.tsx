@@ -14,15 +14,15 @@ export const ImageCarousel: React.FC<Props> = ({
     <>
       <div className="flex flex-row items-center justify-between px-8">
         <p className="font-semibold text-lg py-8 leading-5">{title}</p>
-        {/* <a
+        <a
           href="#"
           className="font-semibold py-8 leading-5 text-blue-cyan text-sm"
           onClick={() => alert('Browse All Clicked')}
         >
           Browse All
-        </a> */}
+        </a>
       </div>
-      <div className="px-4 lg:px-8 ">
+      <div className="px-4 lg:px-8 mb-10 ">
         <Swiper spaceBetween={20} slidesPerView="auto" direction="horizontal">
           {ImageCardData.map((imgCard, index) => {
             return (

@@ -132,8 +132,12 @@ export const ImageCardData = [
   },
   {
     imgUrl: '/default-pic.png',
-    caption: 'Desert Collection',
-    tag: 'Trending',
+    caption: 'Pret Collection',
+    tag: 'New',
+  },
+  {
+    imgUrl: '/default-pic.png',
+    caption: 'Icon Collection',
   },
   {
     imgUrl: '/default-pic.png',
@@ -148,12 +152,6 @@ export const ImageCardData = [
   {
     imgUrl: '/default-pic.png',
     caption: 'Desert Collection',
-    tag: 'Trending',
-  },
-  {
-    imgUrl: '/default-pic.png',
-    caption: 'Desert Collection',
-    tag: 'Trending',
   },
   {
     imgUrl: '/default-pic.png',
@@ -161,3 +159,8 @@ export const ImageCardData = [
     tag: 'Trending',
   },
 ]
+export const LoggedInUserData = {
+  name: 'Sylvia',
+  discriminator: 33457,
+  profilePicUrl: '/profile-pic.png',
+}

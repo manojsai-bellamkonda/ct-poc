@@ -1,9 +1,8 @@
 'use client'
+import NextImage from 'next/image'
 import { SideHeader } from './SideHeader'
 import { SideItem } from './SideItem'
-import { Button } from '@repo/ui'
-// eslint-disable-next-line no-redeclare
-import Image from 'next/image'
+import { Button, LoggedInUserData } from '@repo/ui'
 
 export function Sidebar() {
   return (
@@ -42,15 +41,15 @@ export function Sidebar() {
       <div className="p-8 flex flex-col gap-5">
         <div className="flex items-center gap-3 font-semibold">
           <div>
-            <Image
-              src="/profile-pic.png"
+            <NextImage
+              src={LoggedInUserData.profilePicUrl}
               height={48}
               width={48}
-              alt="profile picture"
+              alt={LoggedInUserData.name}
               className="rounded-full object-cover"
             />
           </div>
-          <div>Sylvia #33457</div>
+          <div>{`${LoggedInUserData.name}#${LoggedInUserData.discriminator}`}</div>
         </div>
         <Button label="Log Out" buttonStyle="px-12"></Button>
       </div>
