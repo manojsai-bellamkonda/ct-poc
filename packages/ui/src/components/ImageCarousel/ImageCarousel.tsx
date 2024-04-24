@@ -7,9 +7,7 @@ type Props = {
   ImageCardData: ImageCardDataType[]
   title?: string
 }
-export const ImageCarousel: React.FC<Props> = ({
-  title = 'External Tools',
-}) => {
+export const ImageCarousel: React.FC<Props> = ({ title = '' }) => {
   return (
     <>
       <div className="flex flex-row items-center justify-between px-8">
