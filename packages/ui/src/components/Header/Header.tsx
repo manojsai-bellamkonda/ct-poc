@@ -1,26 +1,26 @@
 'use client'
+import { usePathname } from 'next/navigation'
 import { Icon } from '../Icon'
 import { twMerge } from 'tailwind-merge'
 
 export interface HeaderProps {
-  page?: string
   greeting?: string
-  name: string
+  name?: string
   textStyle?: string
   iconStyle?: string
-  isHelperIcon?: boolean
 }
 export const Header = ({
-  page = 'home',
   greeting = 'Good Morning',
-  name,
+  name = 'Sylvia',
   textStyle,
   iconStyle,
-  isHelperIcon = true,
 }: HeaderProps) => {
+  const page = usePathname().split('/')[1]
+  const isHomePage = !(page === 'clients' || page === 'profile')
+
   return (
     <div className="bg-white text-black hidden lg:flex py-8 px-8 items-center">
-      {page !== 'home' ? (
+      {!isHomePage ? (
         <div
           className="flex mr-auto items-center"
           onClick={() => {
@@ -39,11 +39,11 @@ export const Header = ({
           {greeting},&nbsp;{name}!
         </p>
       )}
-      {isHelperIcon && (
+      {page !== 'profile' && (
         <>
           <span className="flex items-center justify-center w-8 h-8 rounded-full bg-ghost-white mx-2">
             <Icon
-              iconName={page === 'home' ? 'notification' : 'edit'}
+              iconName={isHomePage ? 'notification' : 'edit'}
               size="16px"
               className={iconStyle}
             />
