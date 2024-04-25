@@ -1,4 +1,5 @@
 import { Icon } from '@repo/ui'
+import NextImage from 'next/image'
 export const ImageCard = ({
   imgUrl,
   caption,
@@ -10,12 +11,9 @@ export const ImageCard = ({
 }) => {
   return (
     <div className="relative flex flex-col h-[314px] w-[183px] md:h-[444px] md:w-[259px] rounded-lg shrink-0 items-stretch overflow-hidden cursor-pointer bg-white text-black">
-      <img
-        className="w-full h-full object-cover"
-        src={imgUrl}
-        alt={caption}
-        draggable="false"
-      />
+      <div className="w-full h-full object-cover relative">
+        <NextImage src={imgUrl} alt={caption} layout="fill" objectFit="cover" />
+      </div>
       <div className="h-16 bg-white-smoke flex items-center justify-between">
         <div className="pl-4 text-sm">{caption}</div>
         <div className="mr-4">

@@ -33,6 +33,14 @@ export const ImageCarousel: React.FC<Props> = ({ title = '' }) => {
               </SwiperSlide>
             )
           })}
+          <SwiperSlide style={{ width: 'auto' }}>
+            <div
+              className="flex flex-col justify-center items-center h-[314px] w-[183px] md:h-[444px] md:w-[259px] rounded-lg bg-white-smoke text-black cursor-pointer"
+              onClick={() => alert('Browse all clicked')}
+            >
+              <div className="text-center">Browse All</div>
+            </div>
+          </SwiperSlide>
         </Swiper>
       </div>
     </>
