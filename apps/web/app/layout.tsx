@@ -2,7 +2,7 @@ import './globals.css'
 import '../styles/global.css'
 import '@repo/ui/styles.css'
 import type { Metadata } from 'next'
-import { Sidebar, Header, greetingData } from '@repo/ui'
+import { Sidebar } from '@repo/ui'
 import { Montserrat } from 'next/font/google'
 
 const montserrat = Montserrat({ subsets: ['latin'] })
@@ -23,10 +23,7 @@ export default function RootLayout({
         className={`flex ${montserrat.className} grid grid-cols-1 md:grid-cols-[320px_auto] h-screen`}
       >
         <Sidebar />
-        <div className="bg-white text-black">
-          <Header name={greetingData.name} greeting={greetingData.greet} />
-          {children}
-        </div>
+        <div className="bg-white text-black">{children}</div>
       </body>
     </html>
   )

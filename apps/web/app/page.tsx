@@ -1,4 +1,6 @@
 import {
+  HeaderHome,
+  greetingData,
   ToolsCarousel,
   toolsCardData,
   ProfilesCarousel,
@@ -10,7 +12,8 @@ import {
 export default function Page(): JSX.Element {
   return (
     <main>
-      <div>
+      <div className="pb-24 md:pb-0">
+        <HeaderHome greeting={greetingData.greet} name={greetingData.name} />
         <ProfilesCarousel profileCardData={profileCardData} />
         <ToolsCarousel toolsCardData={toolsCardData} />
         <NavBar navBarData={NavBarData} />
