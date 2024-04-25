@@ -8,7 +8,7 @@ export default function ClientLayout({
   return (
     <>
       <HeaderClient />
-      <div className="bg-white text-black">{children}</div>
+      {children}
     </>
   )
 }
