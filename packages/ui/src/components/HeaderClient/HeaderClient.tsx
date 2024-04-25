@@ -1,5 +1,6 @@
 'use client'
 import { usePathname } from 'next/navigation'
+import { twMerge } from 'tailwind-merge'
 import Link from 'next/link'
 import { Icon } from '../Icon'
 
@@ -7,13 +8,19 @@ export interface HeaderProps {
   textStyle?: string
   iconStyle?: string
 }
-export const HeaderClient = ({ iconStyle }: HeaderProps) => {
+export const HeaderClient = ({ textStyle, iconStyle }: HeaderProps) => {
   const page = usePathname().split('/')[1]
   return (
     <div className="bg-white text-black hidden lg:flex py-8 px-8 items-center">
       <Link href="/" className="flex mr-auto items-center">
         <Icon iconName="arrowLeft" size="20px"></Icon>
-        <p className="font-medium text-base leading-[22px] px-2">Back</p>
+        <p
+          className={twMerge(
+            `font-medium text-base leading-[22px] px- ${textStyle}`
+          )}
+        >
+          Back
+        </p>
       </Link>
 
       {page === 'clients' && (
