@@ -49,7 +49,10 @@ export function Sidebar() {
             </SideItem>
           </Link>
           <Link
-            href={{ pathname: '/clients', query: { type: 'recently_active' } }}
+            href={{
+              pathname: '/clients',
+              query: { type: 'recently_active' },
+            }}
           >
             <SideItem active={isActive('/clients', 'recently_active')}>
               Recently Active

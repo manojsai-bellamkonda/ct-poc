@@ -119,8 +119,3 @@ export const NavBarData: NavBarDataType[] = [
     image: '/profile-pic.png',
   },
 ]
-export const LoggedInUserData = {
-  imgSrc: '/profile-pic.png',
-  name: 'Sylvia',
-  id: 33457,
-}
