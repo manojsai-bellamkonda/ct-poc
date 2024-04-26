@@ -7,6 +7,8 @@ import {
   profileCardData,
   NavBar,
   NavBarData,
+  Events,
+  eventsData,
 } from '@repo/ui'
 
 export default function Page(): JSX.Element {
@@ -22,6 +24,7 @@ export default function Page(): JSX.Element {
           tag="Trending"
         ></ImageCard> */}
         <NavBar navBarData={NavBarData} />
+        <Events eventsData={eventsData} />
       </div>
     </main>
   )

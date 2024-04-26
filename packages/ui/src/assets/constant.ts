@@ -119,3 +119,24 @@ export const NavBarData: NavBarDataType[] = [
     image: '/profile-pic.png',
   },
 ]
+
+export const eventsData: toolsCardDataType[] = [
+  {
+    title: 'Birthday',
+    subtitle: 'February 15',
+    icon: 'birthdayCake',
+    link: 'dummy',
+  },
+  {
+    title: 'Email',
+    subtitle: 'jennysmith215@gmail.com',
+    icon: 'email',
+    link: 'dummy',
+  },
+  {
+    title: 'Loyalty Tier',
+    subtitle: 'Trendsetter',
+    icon: 'loyaltyBadge',
+    link: 'dummy',
+  },
+]

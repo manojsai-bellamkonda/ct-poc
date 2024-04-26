@@ -1,15 +1,31 @@
+'use client'
 import { Button, ToolCard } from '..'
-export const Events = () => {
+import { ToolCardProps } from '../ToolCard'
+
+type Props = {
+  eventsData: ToolCardProps[]
+}
+const handleButtonClick = () => {
+  alert('Redirected to bag page')
+}
+export const Events: React.FC<Props> = ({ eventsData }) => {
   return (
     <div className="flex flex-col w-fit gap-2">
-      <Button label="Go To Bag" type="secondary" buttonStyle="mb-4" />
-      <ToolCard icon="birthdayCake" title="Birthday" subtitle="February 15" />
-      <ToolCard icon="email" title="Email" subtitle="jennysmith215@gmail.com" />
-      <ToolCard
-        icon="loyaltyBadge"
-        title="Loyalty Tier"
-        subtitle="Trendsetter"
+      <Button
+        label="Go To Bag"
+        type="secondary"
+        buttonStyle="mb-4"
+        onClick={handleButtonClick}
       />
+      {eventsData.map((event) => (
+        <ToolCard
+          key={event.title}
+          title={event.title}
+          subtitle={event.subtitle}
+          icon={event.icon}
+          link={event.link}
+        />
+      ))}
     </div>
   )
 }

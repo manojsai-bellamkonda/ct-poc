@@ -1,14 +1,17 @@
+'use client'
 import { twMerge } from 'tailwind-merge'
 export interface ButtonProps {
   buttonStyle?: string
   textStyle?: string
   label: string
   type?: 'primary' | 'secondary'
+  onClick: any
 }
 export const Button = ({
   buttonStyle,
   textStyle,
   label,
+  onClick,
   type = 'primary',
 }: ButtonProps): React.ReactElement => {
   let defaultButtonStyle =
@@ -21,6 +24,7 @@ export const Button = ({
         `rounded-[6px] px-24 py-[2px] ${defaultButtonStyle} ${buttonStyle}`
       )}
       type="button"
+      onClick={onClick}
     >
       {label && (
         <span
