@@ -26,7 +26,7 @@ export default function RootLayout({
         <Suspense>
           <Sidebar />
         </Suspense>
-        <div className="bg-white text-black">{children}</div>
+        <div className="bg-white text-black pb-20 md:pb-0">{children}</div>
       </body>
     </html>
   )
