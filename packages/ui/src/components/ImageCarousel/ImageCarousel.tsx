@@ -1,5 +1,5 @@
 'use client'
-import { ImageCard, products } from '@repo/ui'
+import { ImageCard, collections } from '@repo/ui'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import 'swiper/swiper-bundle.css'
 
@@ -21,18 +21,18 @@ export const ImageCarousel: React.FC<Props> = ({ title = '' }) => {
       </div>
       <div className="px-4 lg:px-8 mb-10 ">
         <Swiper spaceBetween={20} slidesPerView="auto" direction="horizontal">
-          {products.map((imgCard, index) => {
+          {collections.map((imgCard, index) => {
             return (
-              <SwiperSlide key={index} style={{ width: 'auto' }}>
+              <SwiperSlide key={index} className="!w-fit">
                 <ImageCard
-                  imgUrl={imgCard.image}
+                  imgUrl={imgCard.imgUrl}
                   caption={imgCard.caption}
                   tag={imgCard.tag}
                 />
               </SwiperSlide>
             )
           })}
-          <SwiperSlide style={{ width: 'auto' }}>
+          <SwiperSlide className="!w-fit">
             <div
               className="flex flex-col justify-center items-center h-[314px] w-[183px] md:h-[444px] md:w-[259px] rounded-lg bg-white-smoke text-black cursor-pointer"
               onClick={() => alert('Browse all clicked')}
