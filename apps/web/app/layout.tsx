@@ -20,7 +20,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`flex ${montserrat.className} grid grid-cols-1 md:grid-cols-[320px_auto] h-screen`}
+        className={`flex ${montserrat.className} grid grid-cols-1 md:grid-cols-[320px_calc(100%-320px)] h-screen`}
       >
         <Sidebar />
         <div className="bg-white text-black">{children}</div>
