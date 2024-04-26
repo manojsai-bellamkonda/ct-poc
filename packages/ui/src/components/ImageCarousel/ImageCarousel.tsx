@@ -1,10 +1,9 @@
 'use client'
-import { ImageCard, ImageCardData, ImageCardDataType } from '@repo/ui'
+import { ImageCard, products } from '@repo/ui'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import 'swiper/swiper-bundle.css'
 
 type Props = {
-  ImageCardData: ImageCardDataType[]
   title?: string
 }
 export const ImageCarousel: React.FC<Props> = ({ title = '' }) => {
@@ -22,11 +21,11 @@ export const ImageCarousel: React.FC<Props> = ({ title = '' }) => {
       </div>
       <div className="px-4 lg:px-8 mb-10 ">
         <Swiper spaceBetween={20} slidesPerView="auto" direction="horizontal">
-          {ImageCardData.map((imgCard, index) => {
+          {products.map((imgCard, index) => {
             return (
               <SwiperSlide key={index} style={{ width: 'auto' }}>
                 <ImageCard
-                  imgUrl={imgCard.imgUrl}
+                  imgUrl={imgCard.image}
                   caption={imgCard.caption}
                   tag={imgCard.tag}
                 />

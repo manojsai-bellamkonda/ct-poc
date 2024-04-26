@@ -2,7 +2,7 @@
 import NextImage from 'next/image'
 import { SideHeader } from './SideHeader'
 import { SideItem } from './SideItem'
-import { Button, LoggedInUserData } from '@repo/ui'
+import { Button, User, Store } from '@repo/ui'
 
 export function Sidebar() {
   return (
@@ -13,7 +13,7 @@ export function Sidebar() {
           className="h-5 w-[88px] mx-10 my-4 object-cover border-2"
         />
       </div>
-      <div className="font-semibold mx-10">#39 Water Tower Place</div>
+      <div className="font-semibold mx-10">{Store.name}</div>
       <div className="flex-1 overflow-scroll">
         <div className="py-4 pt-16">
           <SideHeader active={true} iconName="letter">
@@ -42,14 +42,14 @@ export function Sidebar() {
         <div className="flex items-center gap-3 font-semibold">
           <div>
             <NextImage
-              src={LoggedInUserData.profilePicUrl}
+              src={User.profilePic}
               height={48}
               width={48}
-              alt={LoggedInUserData.name}
+              alt={User.name}
               className="rounded-full object-cover"
             />
           </div>
-          <div>{`${LoggedInUserData.name}#${LoggedInUserData.discriminator}`}</div>
+          <div>{`${User.name} #${User.id}`}</div>
         </div>
         <Button label="Log Out" buttonStyle="px-12"></Button>
       </div>
