@@ -1,31 +1,29 @@
-'use client'
-import { Button, ToolCard } from '..'
-import { ToolCardProps } from '../ToolCard'
+import { ToolCard } from '../ToolCard'
 
-type Props = {
-  eventsData: ToolCardProps[]
+interface Client {
+  id: number
+  email: string
+  birthday: string
+  loyalty: string
 }
-const handleButtonClick = () => {
-  alert('Redirected to bag page')
+interface EventsProps {
+  client: Client
 }
-export const Events: React.FC<Props> = ({ eventsData }) => {
+
+export const Events = ({ client }: EventsProps) => {
   return (
     <div className="flex flex-col w-fit gap-2">
-      <Button
-        label="Go To Bag"
-        type="secondary"
-        buttonStyle="mb-4"
-        onClick={handleButtonClick}
+      <ToolCard
+        title="Birthday"
+        subtitle={client.birthday}
+        icon="birthdayCake"
       />
-      {eventsData.map((event) => (
-        <ToolCard
-          key={event.title}
-          title={event.title}
-          subtitle={event.subtitle}
-          icon={event.icon}
-          link={event.link}
-        />
-      ))}
+      <ToolCard title="Email" subtitle={client.email} icon="email" />
+      <ToolCard
+        title="Loyalty Tier"
+        subtitle={client.loyalty}
+        icon="loyaltyBadge"
+      />
     </div>
   )
 }

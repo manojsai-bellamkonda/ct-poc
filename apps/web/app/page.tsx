@@ -4,11 +4,10 @@ import {
   ToolsCarousel,
   toolsCardData,
   ProfilesCarousel,
-  profileCardData,
   NavBar,
   NavBarData,
-  Events,
-  eventsData,
+  ImageCarousel,
+  Clients,
 } from '@repo/ui'
 
 export default function Page(): JSX.Element {
@@ -16,15 +15,10 @@ export default function Page(): JSX.Element {
     <main>
       <div>
         <Header greeting={greetingData.greet} name={greetingData.name} />
-        <ProfilesCarousel profileCardData={profileCardData} />
+        <ProfilesCarousel clients={Clients} />
         <ToolsCarousel toolsCardData={toolsCardData} />
-        {/* <ImageCard
-          imgUrl="/default-pic.png"
-          caption="Desert Collection"
-          tag="Trending"
-        ></ImageCard> */}
         <NavBar navBarData={NavBarData} />
-        <Events eventsData={eventsData} />
+        <ImageCarousel title="Latest From WHBM" />
       </div>
     </main>
   )
