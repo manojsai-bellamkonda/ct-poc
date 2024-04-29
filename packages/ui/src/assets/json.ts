@@ -1,3 +1,4 @@
+import { IconName } from '../components/Icon'
 export const Store = {
   id: 1,
   name: '#39 Water Tower Place',
@@ -274,5 +275,39 @@ export const collections = [
     imgUrl: '/default-pic.png',
     caption: 'Desert Collection',
     tag: 'Trending',
+  },
+]
+
+export type NavBarDataType = {
+  image?: string
+  icon?: IconName
+  text: string
+  link: string
+}
+export const MobileNavBarData: NavBarDataType[] = [
+  {
+    text: 'Products',
+    icon: 'table',
+    link: '/products',
+  },
+  {
+    text: 'Bags',
+    icon: 'basket',
+    link: '/bags',
+  },
+  {
+    text: 'Clients',
+    icon: 'user',
+    link: '/clients',
+  },
+  {
+    text: 'Messages',
+    icon: 'message',
+    link: '/messages',
+  },
+  {
+    text: 'Home',
+    image: '/profile-pic.png',
+    link: '/',
   },
 ]
