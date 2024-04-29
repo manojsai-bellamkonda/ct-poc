@@ -1,6 +1,6 @@
 import { HeaderClient, User } from '@repo/ui'
 
-export default function Layout({
+export default function BagsLayout({
   children,
 }: {
   children: React.ReactNode

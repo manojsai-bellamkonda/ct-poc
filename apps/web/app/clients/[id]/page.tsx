@@ -1,7 +1,7 @@
 'use client'
 
 import { useParams } from 'next/navigation'
-import { Events, NavBar, NavBarData, clientDetails } from '@repo/ui'
+import { Events, MobileNavBar, MobileNavBarData, clientDetails } from '@repo/ui'
 
 export default function ClientPage(): JSX.Element {
   const { id } = useParams()
@@ -14,7 +14,7 @@ export default function ClientPage(): JSX.Element {
   return (
     <main>
       <div className="pb-24 md:pb-0">
-        <NavBar navBarData={NavBarData} />
+        <MobileNavBar navBarData={MobileNavBarData} />
         {client ? (
           <Events client={client} />
         ) : (

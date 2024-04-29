@@ -118,7 +118,9 @@ export function Sidebar() {
         <Button
           label="Log Out"
           buttonStyle="px-12"
-          onClick={() => alert('redirected to the sign up page')}
+          onClick={() => {
+            console.log('LogOut')
+          }}
         ></Button>
       </div>
     </div>

@@ -41,11 +41,6 @@ export const toolsCardData: toolsCardDataType[] = [
   },
 ]
 
-export const greetingData = {
-  name: 'Sylvia',
-  greet: 'Good Morning',
-}
-
 export const profileCardData = [
   {
     name: 'Drink Water',
@@ -89,54 +84,5 @@ export const profileCardData = [
   {
     name: 'Meganium Silverstones',
     imageSrc: 'profile-pic.png',
-  },
-]
-
-export type NavBarDataType = {
-  image?: string
-  icon?: IconName
-  text: string
-}
-export const NavBarData: NavBarDataType[] = [
-  {
-    text: 'Products',
-    icon: 'table',
-  },
-  {
-    text: 'Bags',
-    icon: 'basket',
-  },
-  {
-    text: 'Clients',
-    icon: 'user',
-  },
-  {
-    text: 'Messages',
-    icon: 'message',
-  },
-  {
-    text: 'Home',
-    image: '/profile-pic.png',
-  },
-]
-
-export const eventsData: toolsCardDataType[] = [
-  {
-    title: 'Birthday',
-    subtitle: 'February 15',
-    icon: 'birthdayCake',
-    link: 'dummy',
-  },
-  {
-    title: 'Email',
-    subtitle: 'jennysmith215@gmail.com',
-    icon: 'email',
-    link: 'dummy',
-  },
-  {
-    title: 'Loyalty Tier',
-    subtitle: 'Trendsetter',
-    icon: 'loyaltyBadge',
-    link: 'dummy',
   },
 ]
