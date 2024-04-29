@@ -1,11 +1,14 @@
+'use client'
 import { twMerge } from 'tailwind-merge'
 export interface ButtonProps {
+  onClick: () => void
   buttonStyle?: string
   textStyle?: string
   label: string
   type?: 'primary' | 'secondary'
 }
 export const Button = ({
+  onClick,
   buttonStyle,
   textStyle,
   label,
@@ -21,6 +24,7 @@ export const Button = ({
         `rounded-[6px] px-24 py-[2px] ${defaultButtonStyle} ${buttonStyle}`
       )}
       type="button"
+      onClick={() => onClick()}
     >
       {label && (
         <span
