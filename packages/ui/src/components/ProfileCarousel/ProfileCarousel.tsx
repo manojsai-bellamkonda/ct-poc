@@ -2,7 +2,6 @@
 import { ProfileCard, ProfileCardProps } from '../ProfileCard'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import 'swiper/swiper-bundle.css'
-import '../../styles/global.css'
 
 type Props = {
   profileCardData: ProfileCardProps[]

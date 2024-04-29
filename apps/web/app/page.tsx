@@ -13,7 +13,7 @@ import {
 export default function Page(): JSX.Element {
   return (
     <main>
-      <div className="pb-24 md:pb-0">
+      <div>
         <HeaderHome name={User.name} />
         <ProfilesCarousel profileCardData={profileCardData} />
         <ToolsCarousel toolsCardData={toolsCardData} />
