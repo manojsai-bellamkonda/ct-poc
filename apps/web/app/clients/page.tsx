@@ -1,8 +1,10 @@
-// page for client details
-export default function Page(): JSX.Element {
+import { MobileNavBar, MobileNavBarData } from '@repo/ui'
+export default function Client(): JSX.Element {
   return (
     <main>
-      <div></div>
+      <div className="">
+        <MobileNavBar navBarData={MobileNavBarData} />
+      </div>
     </main>
   )
 }

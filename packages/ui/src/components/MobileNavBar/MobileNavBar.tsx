@@ -1,7 +1,7 @@
 'use client'
 import Link from 'next/link'
 import { NavItem } from '../NavItem'
-import { NavBarDataType } from '../../assets/constant'
+import { NavBarDataType } from '../../assets'
 import { usePathname, useSearchParams } from 'next/navigation'
 type Props = {
   navBarData: NavBarDataType[]

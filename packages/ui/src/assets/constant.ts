@@ -87,36 +87,4 @@ export const profileCardData = [
   },
 ]
 
-export type NavBarDataType = {
-  image?: string
-  icon?: IconName
-  text: string
-  link: string
-}
-export const MobileNavBarData: NavBarDataType[] = [
-  {
-    text: 'Products',
-    icon: 'table',
-    link: '/products',
-  },
-  {
-    text: 'Bags',
-    icon: 'basket',
-    link: '/bags',
-  },
-  {
-    text: 'Clients',
-    icon: 'user',
-    link: '/clients/1',
-  },
-  {
-    text: 'Messages',
-    icon: 'message',
-    link: '/messages',
-  },
-  {
-    text: 'Home',
-    image: '/profile-pic.png',
-    link: '/',
-  },
-]
+
