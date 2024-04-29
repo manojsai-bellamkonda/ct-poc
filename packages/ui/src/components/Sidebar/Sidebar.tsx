@@ -115,7 +115,11 @@ export function Sidebar() {
           </div>
           <div>{`${User.name} #${User.id}`}</div>
         </div>
-        <Button label="Log Out" buttonStyle="px-12"></Button>
+        <Button
+          label="Log Out"
+          buttonStyle="px-12"
+          onClick={() => alert('redirected to the sign up page')}
+        ></Button>
       </div>
     </div>
   )
