@@ -4,6 +4,7 @@ import '@repo/ui/styles.css'
 import type { Metadata } from 'next'
 import { Sidebar, NavBar, NavBarData } from '@repo/ui'
 import { Montserrat } from 'next/font/google'
+import { Suspense } from 'react'
 
 const montserrat = Montserrat({ subsets: ['latin'] })
 
@@ -20,11 +21,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`flex ${montserrat.className} grid grid-cols-1 md:grid-cols-[320px_auto] h-screen`}
+        className={`flex ${montserrat.className} grid grid-cols-1 md:grid-cols-[320px_calc(100%-320px)] h-screen`}
       >
-        <Sidebar />
-        <div className="bg-white text-black">{children}</div>
-        <NavBar navBarData={NavBarData} />
+        <Suspense>
+          <Sidebar />
+          <div className="bg-white text-black pb-20 md:pb-0">{children}</div>
+        </Suspense>
       </body>
     </html>
   )

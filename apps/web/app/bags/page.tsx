@@ -1,5 +1,5 @@
 import { MobileNavBar, MobileNavBarData } from '@repo/ui'
-export default function Client(): JSX.Element {
+export default function Bag(): JSX.Element {
   return (
     <main>
       <div className="">

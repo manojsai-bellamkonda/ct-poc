@@ -1,22 +1,24 @@
 import {
-  Header,
-  greetingData,
+  HeaderHome,
+  User,
   ToolsCarousel,
   toolsCardData,
   ProfilesCarousel,
   profileCardData,
-  RecentOrderData,
-  RecentOrderCarousel,
+  MobileNavBar,
+  MobileNavBarData,
+  ImageCarousel,
 } from '@repo/ui'
 
 export default function Page(): JSX.Element {
   return (
     <main>
-      <div>
-        <Header greeting={greetingData.greet} name={greetingData.name} />
+      <div className="pb-24 md:pb-0">
+        <HeaderHome name={User.name} />
         <ProfilesCarousel profileCardData={profileCardData} />
         <ToolsCarousel toolsCardData={toolsCardData} />
-        <RecentOrderCarousel recentOrderCardData={RecentOrderData} />
+        <MobileNavBar navBarData={MobileNavBarData} />
+        <ImageCarousel title="Latest From WHBM" />
       </div>
     </main>
   )
