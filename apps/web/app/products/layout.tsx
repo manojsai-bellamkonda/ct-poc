@@ -1,6 +1,6 @@
 import { HeaderClient, User } from '@repo/ui'
 
-export default function ClientLayout({
+export default function ProductsLayout({
   children,
 }: {
   children: React.ReactNode

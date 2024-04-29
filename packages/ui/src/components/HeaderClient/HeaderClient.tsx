@@ -5,10 +5,11 @@ import Link from 'next/link'
 import { Icon } from '../Icon'
 
 export interface HeaderProps {
+  id: number
   textStyle?: string
   iconStyle?: string
 }
-export const HeaderClient = ({ textStyle, iconStyle }: HeaderProps) => {
+export const HeaderClient = ({ id, textStyle, iconStyle }: HeaderProps) => {
   const page = usePathname().split('/')[1]
   return (
     <div className="bg-white text-black hidden lg:flex py-8 px-8 items-center">
@@ -25,7 +26,12 @@ export const HeaderClient = ({ textStyle, iconStyle }: HeaderProps) => {
 
       {page === 'clients' && (
         <>
-          <span className="flex items-center justify-center w-8 h-8 rounded-full bg-ghost-white mx-2">
+          <span
+            className="flex items-center justify-center w-8 h-8 rounded-full bg-ghost-white mx-2"
+            onClick={() => {
+              window.alert(`Edit the client profile with id ${id}`)
+            }}
+          >
             <Icon iconName="edit" size="16px" className={iconStyle} />
           </span>
           <span className="flex items-center justify-center w-8 h-8 rounded-full bg-ghost-white mx-2">

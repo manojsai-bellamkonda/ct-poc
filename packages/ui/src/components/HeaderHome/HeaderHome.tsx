@@ -3,17 +3,21 @@ import { Icon } from '../Icon'
 import { twMerge } from 'tailwind-merge'
 
 export interface HeaderProps {
-  greeting?: string
   name: string
   textStyle?: string
   iconStyle?: string
 }
-export const HeaderHome = ({
-  greeting = 'Good Morning',
-  name,
-  textStyle,
-  iconStyle,
-}: HeaderProps) => {
+export const HeaderHome = ({ name, textStyle, iconStyle }: HeaderProps) => {
+  const currentTime = new Date().getHours()
+  let greeting
+
+  if (currentTime >= 5 && currentTime < 12) {
+    greeting = 'Good morning'
+  } else if (currentTime >= 12 && currentTime < 18) {
+    greeting = 'Good afternoon'
+  } else {
+    greeting = 'Good evening'
+  }
   return (
     <div className="bg-white text-black hidden lg:flex py-8 px-8 items-center">
       <p
