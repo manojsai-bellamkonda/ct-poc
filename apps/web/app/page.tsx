@@ -7,6 +7,7 @@ import {
   profileCardData,
   NavBar,
   NavBarData,
+  ImageCarousel,
 } from '@repo/ui'
 
 export default function Page(): JSX.Element {
@@ -17,6 +18,7 @@ export default function Page(): JSX.Element {
         <ProfilesCarousel profileCardData={profileCardData} />
         <ToolsCarousel toolsCardData={toolsCardData} />
         <NavBar navBarData={NavBarData} />
+        <ImageCarousel title="Latest From WHBM" />
       </div>
     </main>
   )
