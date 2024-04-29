@@ -1,18 +1,20 @@
 export interface RecentOrderItemProps {
-  brand: string
-  orderId: number
-  empId: number
-  orderDate: string
-  orderStatus: string
-  inStoreId?: number
+  store: string
+  orderNumber: number
+  employeeID: number
+  deliveryDate: string
+  shipingStatus: string
+  rackNumber?: number
+  purchaseDate: string
+  isInStore: boolean
 }
 export const RecentOrderItem = ({
-  brand,
-  orderId,
-  empId,
-  orderDate,
-  orderStatus,
-  inStoreId,
+  store,
+  orderNumber,
+  employeeID,
+  deliveryDate,
+  shipingStatus,
+  rackNumber,
 }: RecentOrderItemProps) => {
   return (
     <div
@@ -20,14 +22,14 @@ export const RecentOrderItem = ({
     >
       <div className={`flex justify-between text-black  `}>
         <p className="font-semibold text-xs leading-[14.6px] capitalize pb-4">
-          {brand}
+          {store}
         </p>
         <p className="font-semibold text-xs leading-[14.6px]">
-          {orderStatus} {inStoreId && `#${inStoreId} `} {orderDate}
+          {shipingStatus} {rackNumber && `#${rackNumber} `} {deliveryDate}
         </p>
       </div>
       <p className="font-normal text-xs leading-[14.6px] whitespace-pre">
-        {`Order #: ${orderId}    Employee: ${empId}`}
+        {`Order #: ${orderNumber}    Employee: ${employeeID}`}
       </p>
     </div>
   )

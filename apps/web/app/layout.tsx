@@ -2,7 +2,7 @@ import './globals.css'
 import '../styles/global.css'
 import '@repo/ui/styles.css'
 import type { Metadata } from 'next'
-import { Sidebar, NavBar, NavBarData } from '@repo/ui'
+import { Sidebar } from '@repo/ui'
 import { Montserrat } from 'next/font/google'
 import { Suspense } from 'react'
 

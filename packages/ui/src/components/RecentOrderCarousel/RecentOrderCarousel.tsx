@@ -28,12 +28,14 @@ export const RecentOrderCarousel: React.FC<Props> = ({
           return (
             <SwiperSlide key={index}>
               <RecentOrderItem
-                brand={order.brand}
-                empId={order.empId}
-                orderId={order.orderId}
-                orderDate={order.orderDate}
-                orderStatus={order.orderStatus}
-                inStoreId={order.inStoreId}
+                store={order.store}
+                employeeID={order.employeeID}
+                orderNumber={order.orderNumber}
+                deliveryDate={order.deliveryDate}
+                shipingStatus={order.shipingStatus}
+                rackNumber={order.rackNumber}
+                purchaseDate={order.purchaseDate}
+                isInStore={order.isInStore}
               />
             </SwiperSlide>
           )

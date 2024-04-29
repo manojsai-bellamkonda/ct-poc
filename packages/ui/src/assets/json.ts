@@ -1,4 +1,5 @@
 import { IconName } from '../components/Icon'
+import { RecentOrderItemProps } from '../components/RecentOrderItem'
 export const Store = {
   id: 1,
   name: '#39 Water Tower Place',
@@ -175,13 +176,13 @@ export const clientDetails = [
   },
 ]
 
-export const orderDetails = [
+export const orderDetails: RecentOrderItemProps[] = [
   {
     orderNumber: 11111,
     employeeID: 15,
     store: 'WHBM',
     purchaseDate: '10/2/22',
-    delieryDate: '10/2/22',
+    deliveryDate: '10/2/22',
     shipingStatus: 'Arriving',
     isInStore: true,
     rackNumber: 334,
@@ -191,7 +192,7 @@ export const orderDetails = [
     employeeID: 15,
     store: 'WHBM',
     purchaseDate: '10/2/22',
-    delieryDate: '10/2/22',
+    deliveryDate: '10/2/22',
     shipingStatus: 'Arriving',
     isInStore: false,
   },
@@ -200,7 +201,7 @@ export const orderDetails = [
     employeeID: 15,
     store: 'WHBM',
     purchaseDate: '10/2/22',
-    delieryDate: '10/2/22',
+    deliveryDate: '10/2/22',
     shipingStatus: 'Delivered',
     isInStore: false,
   },
