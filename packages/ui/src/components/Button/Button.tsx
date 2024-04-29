@@ -21,7 +21,7 @@ export const Button = ({
   return (
     <button
       className={twMerge(
-        `rounded-[6px] px-24 py-[2px] ${defaultButtonStyle} ${buttonStyle}`
+        `rounded-[6px] px-24 py-[2px] hover:cursor-pointer ${defaultButtonStyle} ${buttonStyle}`
       )}
       type="button"
       onClick={() => onClick()}

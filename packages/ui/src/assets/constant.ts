@@ -41,11 +41,6 @@ export const toolsCardData: toolsCardDataType[] = [
   },
 ]
 
-export const userData = {
-  name: 'Sylvia',
-  id: 11,
-}
-
 export const profileCardData = [
   {
     name: 'Drink Water',
