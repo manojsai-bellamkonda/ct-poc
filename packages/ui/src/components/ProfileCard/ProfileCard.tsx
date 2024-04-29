@@ -1,5 +1,7 @@
+'use client'
 import NextImage from 'next/image'
-import { User } from '../..'
+import { User } from '../../assets'
+
 export interface ProfileCardProps {
   id: number
   assignedTo: number
@@ -9,10 +11,20 @@ export interface ProfileCardProps {
   premiumCustomer: boolean
 }
 
-export const ProfileCard = ({ profile }: { profile: ProfileCardProps }) => {
+export const ProfileCard = ({
+  profile,
+  onClick,
+}: {
+  profile: ProfileCardProps
+  onClick: () => void
+}) => {
   const { firstName, lastName, premiumCustomer } = profile
+
   return (
-    <div className="flex flex-col items-center gap-4 bg-white-smoke rounded-2xl shadow px-9 py-6 hover:shadow-lg transition-shadow w-[165px] cursor-pointer">
+    <div
+      className="flex flex-col items-center gap-4 bg-white-smoke rounded-2xl shadow px-9 py-6 hover:shadow-lg transition-shadow w-[165px] cursor-pointer "
+      onClick={onClick}
+    >
       <div
         className={`w-12 h-12 rounded-full ${premiumCustomer ? 'bg-gradient-to-r from-purple-300 to-purple-600' : 'bg-white'}`}
       >

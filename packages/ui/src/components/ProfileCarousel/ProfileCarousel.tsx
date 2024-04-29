@@ -3,9 +3,9 @@ import { ProfileCard, ProfileCardProps } from '../ProfileCard'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import 'swiper/swiper-bundle.css'
 import '../../styles/global.css'
-import Link from 'next/link'
 import { Icon } from '..'
 import { useState } from 'react'
+import { useRouter } from 'next/navigation'
 
 type Props = {
   clients: ProfileCardProps[]
@@ -17,6 +17,7 @@ export const ProfilesCarousel: React.FC<Props> = ({
   title = 'Clients',
 }) => {
   const [searchQuery, setSearchQuery] = useState('')
+  const router = useRouter()
 
   const handleSearchChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setSearchQuery(event.target.value)
@@ -30,6 +31,9 @@ export const ProfilesCarousel: React.FC<Props> = ({
       .toLowerCase()
       .includes(searchQuery.toLowerCase())
   )
+  const navigateToCreate = () => {
+    router.push(`/clients/create`)
+  }
 
   return (
     <>
@@ -57,29 +61,28 @@ export const ProfilesCarousel: React.FC<Props> = ({
       <div className="profile-carousel px-4 lg:px-8">
         <div className="overflow-x-auto">
           <Swiper spaceBetween={20} slidesPerView="auto" direction="horizontal">
-            <SwiperSlide className="!w-fit">
-              <Link href="/clients/create">
-                <div className="flex flex-col items-center gap-4 bg-white-smoke rounded-2xl shadow px-9 py-6 hover:shadow-lg transition-shadow w-[165px] cursor-pointer">
-                  <div className="bg-white rounded-full w-[42px] h-[42px] m-[3px]">
-                    <img
-                      src={'profile-pic.png'}
-                      alt={`add new`}
-                      className="object-cover rounded-full "
-                    />
-                  </div>
-                  <div className="text-md font-bold text-black text-center">
-                    Add
-                    <br />
-                    New
-                  </div>
+            <SwiperSlide className="!w-fit" onClick={() => navigateToCreate()}>
+              <div className="flex flex-col items-center gap-4 bg-white-smoke rounded-2xl shadow px-9 py-6 hover:shadow-lg transition-shadow w-[165px] cursor-pointer">
+                <div className="bg-white rounded-full w-[42px] h-[42px] m-[3px]">
+                  <img
+                    src={'profile-pic.png'}
+                    alt={`add new`}
+                    className="object-cover rounded-full "
+                  />
                 </div>
-              </Link>
+                <div className="text-md font-bold text-black text-center">
+                  Add
+                  <br />
+                  New
+                </div>
+              </div>
             </SwiperSlide>
-            {filteredClients.map((profile, index) => (
-              <SwiperSlide key={profile.id || index} className="!w-fit">
-                <Link href={`/clients/${profile.id}`} passHref>
-                  <ProfileCard profile={profile} />
-                </Link>
+            {filteredClients.map((profile) => (
+              <SwiperSlide key={profile.id} className="!w-fit">
+                <ProfileCard
+                  profile={profile}
+                  onClick={() => router.push(`/clients/${profile.id}`)}
+                />
               </SwiperSlide>
             ))}
           </Swiper>
