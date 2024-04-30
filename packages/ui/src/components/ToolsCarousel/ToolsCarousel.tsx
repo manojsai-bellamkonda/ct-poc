@@ -2,7 +2,6 @@
 import { ToolCard, ToolCardProps } from '../ToolCard'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import 'swiper/swiper-bundle.css'
-import '../../styles/global.css'
 
 type Props = {
   toolsCardData: ToolCardProps[]

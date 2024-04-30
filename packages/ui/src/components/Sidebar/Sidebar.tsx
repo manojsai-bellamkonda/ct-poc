@@ -119,7 +119,7 @@ export function Sidebar() {
           label="Log Out"
           buttonStyle="px-12"
           onClick={() => {
-            console.log('LogOut')
+            window.alert('Log out should work')
           }}
         ></Button>
       </div>

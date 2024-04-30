@@ -1,4 +1,5 @@
 import { IconName } from '../components/Icon'
+import { RecentOrderItemProps } from '../components/RecentOrderItem'
 export const Store = {
   id: 1,
   name: '#39 Water Tower Place',
@@ -37,7 +38,7 @@ export const Clients = [
     firstName: 'Marcus',
     lastName: 'Brennan',
     profilePic: 'profile-pic.png',
-    premiumCustomer: true,
+    premiumCustomer: false,
   },
   {
     id: 114,
@@ -45,7 +46,7 @@ export const Clients = [
     firstName: 'Lucy',
     lastName: 'Green',
     profilePic: 'profile-pic.png',
-    premiumCustomer: true,
+    premiumCustomer: false,
   },
   {
     id: 115,
@@ -80,6 +81,10 @@ export const clientDetails = [
     isEmailEnabled: true,
     isSmsEnabled: true,
     isCallEnabled: true,
+    bag: [
+      { productId: 11112, name: 'Icon' },
+      { productId: 11112, name: 'Pret' },
+    ],
   },
   {
     id: 112,
@@ -103,6 +108,7 @@ export const clientDetails = [
     isEmailEnabled: true,
     isSmsEnabled: true,
     isCallEnabled: true,
+    bag: [{ productId: 11111, name: 'Desert' }],
   },
   {
     id: 113,
@@ -126,6 +132,11 @@ export const clientDetails = [
     isEmailEnabled: true,
     isSmsEnabled: true,
     isCallEnabled: true,
+    bag: [
+      { productId: 11111, name: 'Desert' },
+      { productId: 11112, name: 'Icon' },
+      { productId: 11112, name: 'Pret' },
+    ],
   },
   {
     id: 114,
@@ -149,6 +160,10 @@ export const clientDetails = [
     isEmailEnabled: true,
     isSmsEnabled: true,
     isCallEnabled: true,
+    bag: [
+      { productId: 11111, name: 'Desert' },
+      { productId: 11112, name: 'Pret' },
+    ],
   },
   {
     id: 115,
@@ -172,16 +187,21 @@ export const clientDetails = [
     isEmailEnabled: true,
     isSmsEnabled: true,
     isCallEnabled: true,
+    bag: [
+      { productId: 11111, name: 'Desert' },
+      { productId: 11112, name: 'Icon' },
+      { productId: 11112, name: 'Pret' },
+    ],
   },
 ]
 
-export const orderDetails = [
+export const orderDetails: RecentOrderItemProps[] = [
   {
     orderNumber: 11111,
     employeeID: 15,
     store: 'WHBM',
     purchaseDate: '10/2/22',
-    delieryDate: '10/2/22',
+    deliveryDate: '10/2/22',
     shipingStatus: 'Arriving',
     isInStore: true,
     rackNumber: 334,
@@ -191,7 +211,7 @@ export const orderDetails = [
     employeeID: 15,
     store: 'WHBM',
     purchaseDate: '10/2/22',
-    delieryDate: '10/2/22',
+    deliveryDate: '10/2/22',
     shipingStatus: 'Arriving',
     isInStore: false,
   },
@@ -200,7 +220,7 @@ export const orderDetails = [
     employeeID: 15,
     store: 'WHBM',
     purchaseDate: '10/2/22',
-    delieryDate: '10/2/22',
+    deliveryDate: '10/2/22',
     shipingStatus: 'Delivered',
     isInStore: false,
   },
