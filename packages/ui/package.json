@@ -8,7 +8,7 @@
   },
   "scripts": {
     "build": "tsup",
-    "dev": "NODE_OPTIONS='--max-old-space-size=4096' tsup  --watch",
+    "dev": "tsup --watch",
     "lint": "eslint . --max-warnings 0",
     "generate:component": "turbo gen react-component"
   },

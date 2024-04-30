@@ -38,7 +38,7 @@ export const Clients = [
     firstName: 'Marcus',
     lastName: 'Brennan',
     profilePic: 'profile-pic.png',
-    premiumCustomer: true,
+    premiumCustomer: false,
   },
   {
     id: 114,
@@ -46,7 +46,7 @@ export const Clients = [
     firstName: 'Lucy',
     lastName: 'Green',
     profilePic: 'profile-pic.png',
-    premiumCustomer: true,
+    premiumCustomer: false,
   },
   {
     id: 115,
@@ -81,6 +81,10 @@ export const clientDetails = [
     isEmailEnabled: true,
     isSmsEnabled: true,
     isCallEnabled: true,
+    bag: [
+      { productId: 11112, name: 'Icon' },
+      { productId: 11112, name: 'Pret' },
+    ],
   },
   {
     id: 112,
@@ -104,6 +108,7 @@ export const clientDetails = [
     isEmailEnabled: true,
     isSmsEnabled: true,
     isCallEnabled: true,
+    bag: [{ productId: 11111, name: 'Desert' }],
   },
   {
     id: 113,
@@ -127,6 +132,11 @@ export const clientDetails = [
     isEmailEnabled: true,
     isSmsEnabled: true,
     isCallEnabled: true,
+    bag: [
+      { productId: 11111, name: 'Desert' },
+      { productId: 11112, name: 'Icon' },
+      { productId: 11112, name: 'Pret' },
+    ],
   },
   {
     id: 114,
@@ -150,6 +160,10 @@ export const clientDetails = [
     isEmailEnabled: true,
     isSmsEnabled: true,
     isCallEnabled: true,
+    bag: [
+      { productId: 11111, name: 'Desert' },
+      { productId: 11112, name: 'Pret' },
+    ],
   },
   {
     id: 115,
@@ -173,6 +187,11 @@ export const clientDetails = [
     isEmailEnabled: true,
     isSmsEnabled: true,
     isCallEnabled: true,
+    bag: [
+      { productId: 11111, name: 'Desert' },
+      { productId: 11112, name: 'Icon' },
+      { productId: 11112, name: 'Pret' },
+    ],
   },
 ]
 
