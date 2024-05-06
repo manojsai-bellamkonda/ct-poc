@@ -9,6 +9,7 @@ import {
   RecentOrderCarousel,
   orderDetails,
   Button,
+  ImageCarousel,
 } from '@repo/ui'
 
 export default function ClientPage(): JSX.Element {
@@ -44,6 +45,7 @@ export default function ClientPage(): JSX.Element {
           )}
         </div>
         <RecentOrderCarousel recentOrderCardData={orderDetails} />
+        <ImageCarousel title="Latest From WHBM" />
       </div>
     </main>
   )

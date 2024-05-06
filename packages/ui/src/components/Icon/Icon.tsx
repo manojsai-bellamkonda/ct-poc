@@ -22,6 +22,7 @@ import {
   FaArrowRight,
   FaArrowLeft,
   FaTable,
+  FaBarcode, //for scan QR barcode.
 } from 'react-icons/fa'
 
 const iconMap = {
@@ -48,6 +49,7 @@ const iconMap = {
   arrowRight: FaArrowRight,
   arrowLeft: FaArrowLeft,
   table: FaTable,
+  barcode: FaBarcode,
 }
 export type IconName = keyof typeof iconMap
 interface IconProps {
