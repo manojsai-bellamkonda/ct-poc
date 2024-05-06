@@ -1,5 +1,6 @@
 import {
   FaHeart, // for like
+  FaRegHeart, // outlined heart
   FaUser, // for user profile
   FaBell, // for notification
   FaEllipsisH, // for kebab menu (vertical dots)
@@ -27,6 +28,7 @@ import {
 
 const iconMap = {
   heart: FaHeart,
+  outlineHeart: FaRegHeart,
   user: FaUser,
   notification: FaBell,
   kebabMenu: FaEllipsisH,

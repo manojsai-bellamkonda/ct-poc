@@ -4,13 +4,18 @@ export const ImageCard = ({
   imgUrl,
   caption,
   tag,
+  onClick,
 }: {
   imgUrl: string
   caption: string
   tag?: string
+  onClick?: any
 }) => {
   return (
-    <div className="relative flex flex-col h-[314px] w-[183px] md:h-[444px] md:w-[259px] rounded-lg shrink-0 items-stretch overflow-hidden cursor-pointer bg-white text-black">
+    <div
+      className="relative flex flex-col h-[314px] w-[183px] md:h-[444px] md:w-[259px] rounded-lg shrink-0 items-stretch overflow-hidden cursor-pointer bg-white text-black"
+      onClick={onClick}
+    >
       <div className="w-full h-full object-cover relative">
         <NextImage src={imgUrl} alt={caption} layout="fill" objectFit="cover" />
       </div>

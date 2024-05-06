@@ -41,7 +41,7 @@ export const ProfilesCarousel: React.FC<Props> = ({
         <div className="flex flex-row items-center justify-between">
           <p className="font-semibold text-lg py-8 leading-5">{title}</p>
           <p
-            className="font-semibold py-8 leading-5 text-blue-cyan text-sm"
+            className="font-semibold py-8 leading-5 text-blue-cyan text-sm cursor-pointer"
             onClick={handleClickViewAll}
           >
             View all

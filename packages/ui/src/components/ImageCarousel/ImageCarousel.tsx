@@ -28,6 +28,9 @@ export const ImageCarousel: React.FC<Props> = ({ title = '' }) => {
                   imgUrl={imgCard.imgUrl}
                   caption={imgCard.caption}
                   tag={imgCard.tag}
+                  onClick={() =>
+                    alert('redirect to product page with specific collection')
+                  }
                 />
               </SwiperSlide>
             )

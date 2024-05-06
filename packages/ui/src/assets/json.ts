@@ -29,7 +29,7 @@ export const Clients = [
     assignedTo: 11,
     firstName: 'Ellen',
     lastName: 'Clarke',
-    profilePic: 'profile-pic.png',
+    profilePic: '/profile-pic.png',
     premiumCustomer: true,
   },
   {
@@ -37,7 +37,7 @@ export const Clients = [
     assignedTo: 11,
     firstName: 'Marcus',
     lastName: 'Brennan',
-    profilePic: 'profile-pic.png',
+    profilePic: '/profile-pic.png',
     premiumCustomer: false,
   },
   {
@@ -45,7 +45,7 @@ export const Clients = [
     assignedTo: 11,
     firstName: 'Lucy',
     lastName: 'Green',
-    profilePic: 'profile-pic.png',
+    profilePic: '/profile-pic.png',
     premiumCustomer: false,
   },
   {
@@ -53,7 +53,7 @@ export const Clients = [
     assignedTo: 11,
     firstName: 'Noah',
     lastName: 'Khan',
-    profilePic: 'profile-pic.png',
+    profilePic: '/profile-pic.png',
     premiumCustomer: true,
   },
 ]
@@ -61,6 +61,7 @@ export const Clients = [
 export const clientDetails = [
   {
     id: 111,
+    profilePic: '/profile-pic.png',
     firstName: 'Jennifer',
     lastName: 'Smith-Williams',
     city: 'Chicago',
@@ -88,6 +89,7 @@ export const clientDetails = [
   },
   {
     id: 112,
+    profilePic: '/profile-pic.png',
     firstName: 'Ellen',
     lastName: 'Clarke',
     city: 'Chicago',
@@ -112,6 +114,7 @@ export const clientDetails = [
   },
   {
     id: 113,
+    profilePic: '/profile-pic.png',
     firstName: 'Marcus',
     lastName: 'Brennan',
     city: 'Denver',
@@ -140,6 +143,7 @@ export const clientDetails = [
   },
   {
     id: 114,
+    profilePic: '/profile-pic.png',
     firstName: 'Lucy',
     lastName: 'Green',
     city: 'Seattle',
@@ -154,7 +158,7 @@ export const clientDetails = [
     orders: [11111, 11112],
     assignDate: '04/05/2024',
     assignedTo: 11,
-    tag: 'New',
+    tag: 'Active',
     isFavourite: false,
     recommendedProducts: [1111, 1112, 1113],
     isEmailEnabled: true,
@@ -167,6 +171,7 @@ export const clientDetails = [
   },
   {
     id: 115,
+    profilePic: '/profile-pic.png',
     firstName: 'Noah',
     lastName: 'Khan',
     city: 'Miami',

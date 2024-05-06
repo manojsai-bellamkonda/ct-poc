@@ -12,7 +12,7 @@ interface EventsProps {
 
 export const Events = ({ client }: EventsProps) => {
   return (
-    <div className="flex flex-col w-fit gap-2">
+    <div className="flex flex-col gap-4 mt-2">
       <ToolCard
         title="Birthday"
         subtitle={client.birthday}

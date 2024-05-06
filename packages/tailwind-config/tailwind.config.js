@@ -8,6 +8,7 @@ module.exports = {
         'ghost-white': '#F5F5F6',
         'manatee-light': '#919296',
         'blue-cyan': '#0D99FF',
+        'teal-deer': '#8EEDAD'
       },
     },
   },
