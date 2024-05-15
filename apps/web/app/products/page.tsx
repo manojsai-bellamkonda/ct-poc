@@ -1,10 +1,9 @@
-import { MobileNavBar, MobileNavBarData } from '@repo/ui'
+import { ProductList } from '@repo/ui'
+
 export default function Product(): JSX.Element {
   return (
-    <main>
-      <div className="">
-        <MobileNavBar navBarData={MobileNavBarData} />
-      </div>
+    <main className=" m-8">
+      <ProductList />
     </main>
   )
 }

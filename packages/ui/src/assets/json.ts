@@ -231,7 +231,7 @@ export const orderDetails: RecentOrderItemProps[] = [
   },
 ]
 
-export const products = [
+export const products: ProductType[] = [
   {
     productId: 11111,
     image: '/default-pic.png',
@@ -259,6 +259,16 @@ export const products = [
     collection: 'Icon',
   },
 ]
+
+export type ProductType = {
+  productId: number
+  image?: string
+  caption: string
+  tag?: string
+  launchDate?: string
+  category?: string
+  collection?: string
+}
 
 export const collections = [
   {

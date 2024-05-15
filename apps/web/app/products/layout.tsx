@@ -1,4 +1,4 @@
-import { HeaderClient, User } from '@repo/ui'
+import { HeaderClient, MobileNavBar, MobileNavBarData, User } from '@repo/ui'
 
 export default function ProductsLayout({
   children,
@@ -9,6 +9,7 @@ export default function ProductsLayout({
     <>
       <HeaderClient id={User.id} />
       {children}
+      <MobileNavBar navBarData={MobileNavBarData} />
     </>
   )
 }
